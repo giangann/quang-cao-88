@@ -68,7 +68,7 @@ export const Header = () => {
             >
               QC-88
             </Typography>
-            <Stack direction="row" spacing={4}>
+            <Stack direction="row" spacing={8}>
               {pages.map((page: any) => (
                 <MulishTypo
                   key={page.name}

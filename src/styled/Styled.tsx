@@ -1,4 +1,4 @@
-import { Box, Button, styled, Typography } from '@mui/material';
+import { Box, Button, Grid, styled, Typography } from '@mui/material';
 
 import { black, red } from '../constants';
 
@@ -57,4 +57,19 @@ export const BlackOutlinedBtn = styled(Button)({
 
 export const LinkCustom = styled('a')({
   textDecoration: 'none',
+});
+export const GridCenterVertical = styled(Grid)({
+  display: 'flex',
+  alignItems: 'center',
+});
+
+export const GridCenterHorizontal = styled(Grid)({
+  display: 'flex',
+  justifyContent: 'center',
+});
+
+export const GridCenter = styled(Grid)({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
 });
