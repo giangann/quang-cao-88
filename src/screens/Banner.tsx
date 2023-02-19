@@ -1,5 +1,6 @@
 import { Box, Container, Stack, Typography } from '@mui/material';
 import React from 'react';
+
 import { BoxWithBackgroundAndLayer } from '../components';
 import { red } from '../constants';
 import { LatoTypo, MulishTypo, WhiteOutlinedBtn } from '../styled';
