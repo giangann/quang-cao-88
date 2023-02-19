@@ -54,3 +54,7 @@ export const BlackOutlinedBtn = styled(Button)({
     transition: '1s',
   },
 });
+
+export const LinkCustom = styled('a')({
+  textDecoration: 'none',
+});
