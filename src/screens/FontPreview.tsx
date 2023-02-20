@@ -1,9 +1,11 @@
 import '../App.css';
 
-import { Box, Typography } from '@mui/material';
-import { useAtomValue } from 'jotai';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { useAtom, useAtomValue } from 'jotai';
 
 import { previewAtom } from '../libs/atoms';
+import { useEffect } from 'react';
+import Draggable from 'react-draggable';
 
 export type FontPreviewProps = {
   text: string;
@@ -12,15 +14,41 @@ export type FontPreviewProps = {
   size: number;
 };
 export const FontPreview = () => {
-  const preview = useAtomValue(previewAtom);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [preview, setPreview] = useAtom(previewAtom);
+  const bgImage =
+    'https://blogger.googleusercontent.com/img/a/AVvXsEjfvzA2Autc8tHTDO_fudo8YjEsPeKXfb0cqynBmdOulMMBV9wSn5ZEvVxA3M9OPH74VfnnaT4Nw57nIKD3GgzdLLEz3yULxh-tJKqB5Ems0Jqbc-mBauz5pQWt85-Ss5LwIv736Y5DzKp6Aoky2W0PZ1l6-4mJA-QhQn2swsGNcTKI5IYn4VXbyrO3=w640-h640';
+
+  useEffect(() => {
+    setPreview({
+      ...preview,
+      size: isMobile ? 50 : preview.size,
+    });
+  }, []);
   return (
-    <Box sx={{ backgroundColor: 'black', height: { xs: 450, sm: 750 }, width: '100%' }}>
-      <Typography
-        className={`shadow-${preview.color}`}
-        sx={{ fontFamily: preview.font, color: 'white', fontSize: `${preview.size}px` }}
-      >
-        {preview.text}
-      </Typography>
+    <Box
+      sx={{ background: `url(${bgImage})`, height: { xs: 450, sm: 750 }, width: '100%' }}
+    >
+      <Draggable>
+        <Box
+          sx={{
+            position: 'absolute',
+            cursor: 'move',
+          }}
+        >
+          <span
+            className={`shadow-${preview.color}`}
+            style={{
+              fontFamily: preview.font,
+              color: 'white',
+              fontSize: `${preview.size}px`,
+            }}
+            dangerouslySetInnerHTML={{ __html: preview.text }}
+          />
+        </Box>
+      </Draggable>
     </Box>
   );
 };

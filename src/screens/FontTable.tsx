@@ -1,12 +1,14 @@
 import '../App.css';
 
 import { Box, Container, Tab, Tabs, Typography } from '@mui/material';
+import React from 'react';
 
 import { listFont } from '../constants';
+import { ChooseColor } from './ChooseColor';
 import { ChooseFont } from './ChooseFont';
 import { FontPreviewProps } from './FontPreview';
-import React from 'react';
-import { ChooseColor } from './ChooseColor';
+import { TypeText } from './TypeText';
+import { ChooseFontSize } from './ChooseFontSize';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -26,7 +28,7 @@ function TabPanel(props: TabPanelProps) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box sx={{ py: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -53,20 +55,21 @@ export const FontTable = () => {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Item One" {...a11yProps(0)} />
-          <Tab label="Item Two" {...a11yProps(1)} />
-          <Tab label="Item Three" {...a11yProps(2)} />
+          <Tab label="Nhập chữ" {...a11yProps(0)} />
+          <Tab label="Chọn font" {...a11yProps(1)} />
+          <Tab label="Chọn màu" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <ChooseFont />
+        <TypeText />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <ChooseColor />
+        <ChooseFont />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        Item Three
+        <ChooseColor />
       </TabPanel>
+      <ChooseFontSize />
     </Box>
   );
 };

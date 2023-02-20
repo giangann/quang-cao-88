@@ -13,8 +13,8 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
-      <Reason />
       <CustomizedProductFont />
+      <Reason />
     </Box>
   );
 };

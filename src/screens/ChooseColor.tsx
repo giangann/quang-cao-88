@@ -1,7 +1,7 @@
 import { Grid, IconButton, Typography } from '@mui/material';
 import { useAtom } from 'jotai';
-import { MaterialSymbolsLightbulbOutlineRounded } from '../assets/icons';
 
+import { MaterialSymbolsLightbulbOutlineRounded } from '../assets/icons';
 import { listColorAndColorName, listFont, listFontColor } from '../constants';
 import { previewAtom } from '../libs/atoms';
 import { GridCenter, MulishTypo, textHoverStyle } from '../styled';
