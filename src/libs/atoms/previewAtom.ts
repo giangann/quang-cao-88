@@ -2,10 +2,10 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import { atom } from 'jotai';
 
 const defaultPreviewAtom = {
-  text: 'Neon Light',
+  text: 'Led Neon sign',
   font: 'Bayview',
   color: 'pink',
-  size: 140,
+  size: 70,
 };
 const previewAtom = atom(defaultPreviewAtom);
 

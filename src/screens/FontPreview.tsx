@@ -18,8 +18,7 @@ export const FontPreview = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [preview, setPreview] = useAtom(previewAtom);
-  const bgImage =
-    'https://blogger.googleusercontent.com/img/a/AVvXsEjfvzA2Autc8tHTDO_fudo8YjEsPeKXfb0cqynBmdOulMMBV9wSn5ZEvVxA3M9OPH74VfnnaT4Nw57nIKD3GgzdLLEz3yULxh-tJKqB5Ems0Jqbc-mBauz5pQWt85-Ss5LwIv736Y5DzKp6Aoky2W0PZ1l6-4mJA-QhQn2swsGNcTKI5IYn4VXbyrO3=w640-h640';
+  const bgImagePath = 'src/assets/images/bgImageWithGridAndWaterMark.jpg';
 
   useEffect(() => {
     setPreview({
@@ -29,7 +28,14 @@ export const FontPreview = () => {
   }, []);
   return (
     <Box
-      sx={{ background: `url(${bgImage})`, height: { xs: 450, sm: 750 }, width: '100%' }}
+      sx={{
+        background: `url(${bgImagePath})`,
+        height: { xs: 450, sm: 750 },
+        width: '100%',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
     >
       <Draggable>
         <Box

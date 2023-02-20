@@ -19,7 +19,7 @@ export const ChooseFontSize = () => {
       <Slider
         aria-label="font-size"
         min={10}
-        max={200}
+        max={140}
         valueLabelDisplay="auto"
         value={preview.size}
         onChange={handleChangePreviewFontSize}
