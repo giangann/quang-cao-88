@@ -1,7 +1,7 @@
 import { Container, Grid } from '@mui/material';
 import { useAtom } from 'jotai';
-import { BoxWithTileSubtitleDescription } from '../components';
 
+import { BoxWithTileSubtitleDescription } from '../components';
 import { previewAtom } from '../libs/atoms';
 import { FontPreview } from './FontPreview';
 import { FontTable } from './FontTable';
