@@ -18,7 +18,7 @@ export const FontPreview = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [preview, setPreview] = useAtom(previewAtom);
-  const bgImagePath = 'src/assets/images/bgImageWithGridAndWaterMark.jpg';
+  const bgImagePath = '/bgImageWithGridAndWaterMark.jpg';
 
   useEffect(() => {
     setPreview({
