@@ -15,7 +15,7 @@ export const ChooseFont = () => {
     });
   };
   return (
-    <Grid container spacing={2}>
+    <Grid container columnSpacing={1} rowSpacing={2}>
       {listFont.map((font, index) => (
         <GridCenter key={index} item xs={3}>
           <div
@@ -24,7 +24,7 @@ export const ChooseFont = () => {
             // role="button"
             aria-hidden="true"
           >
-            <Typography sx={{ fontFamily: font, fontSize: 24, ...textHoverStyle }}>
+            <Typography sx={{ fontFamily: font, fontSize: 22, ...textHoverStyle }}>
               {font}
             </Typography>
           </div>

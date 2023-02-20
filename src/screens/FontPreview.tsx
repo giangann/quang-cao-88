@@ -14,7 +14,7 @@ export type FontPreviewProps = {
 export const FontPreview = () => {
   const preview = useAtomValue(previewAtom);
   return (
-    <Box sx={{ backgroundColor: 'black' }}>
+    <Box sx={{ backgroundColor: 'black', height: { xs: 450, sm: 750 }, width: '100%' }}>
       <Typography
         className={`shadow-${preview.color}`}
         sx={{ fontFamily: preview.font, color: 'white', fontSize: `${preview.size}px` }}

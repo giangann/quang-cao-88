@@ -7,9 +7,51 @@ export const listFontColor = [
   'pink ',
   'white ',
   'blue ',
+  'mint ',
+];
+
+export const listColorAndColorName = [
+  {
+    name: 'Đỏ',
+    slug: 'red',
+  },
+  {
+    name: 'Cam',
+    slug: 'orange',
+  },
+  {
+    name: 'Vàng',
+    slug: 'yellow',
+  },
+  {
+    name: 'Xanh chuối',
+    slug: 'green',
+  },
+  {
+    name: 'Tím',
+    slug: 'purple',
+  },
+  {
+    name: 'Hồng',
+    slug: 'pink',
+  },
+  {
+    name: 'Trắng',
+    slug: 'white',
+  },
+  {
+    name: 'Xanh dương',
+    slug: 'blue',
+  },
+  {
+    name: 'Xanh ngọc',
+    slug: 'mint',
+  },
+];
+
+export const extraColor = [
   'warm-white ',
   'lemon-yellow ',
-  'mint ',
   'deep-green ',
   'ice-blue ',
   'tropical-blue ',

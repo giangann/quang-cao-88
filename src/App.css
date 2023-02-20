@@ -99,6 +99,37 @@
     0 0 25px #ff7575, 0 0 30px #ff7575, 0 0 35px #ff7575, 0 0 40px #ff7575,
     2px 4px 3px rgba(0, 0, 0, 0.3);
 }
+
+/* icon placeholder color */
+.icon-red {
+  color: #ed6565;
+}
+
+.icon-orange {
+  color: #ff8d02;
+}
+.icon-yellow {
+  color: #eddf65;
+}
+.icon-green {
+  color: #85ffaa;
+}
+.icon-purple {
+  color: #cd65ed;
+}
+.icon-pink {
+  color: #ff90ff;
+}
+.icon-white {
+  color: #ddd;
+}
+.icon-blue {
+  color: #0274fc;
+}
+.icon-mint {
+  color: #80ffd9;
+}
+
 /* font list */
 /*  */
 /*  */
