@@ -13,21 +13,21 @@ import {
 export const HotProduct = () => {
   const hotProducts = [
     {
-      name: 'Metro Ads',
+      name: 'Bán quần áo',
       image:
         'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/bryan-lobos-v6Y5j53HmCw-unsplash.jpg',
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
       price: '10.500.000 VND',
     },
     {
-      name: 'Hoarding Board',
+      name: 'Quán ăn',
       image:
         'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/matthew-smith-raeh5UIJixs-unsplash-800x1000.jpg',
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
       price: '15.530.000 VND',
     },
     {
-      name: 'Transit Media',
+      name: 'Rạp chiếu phim',
       image:
         'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/ryunosuke-kikuno-3UDme-mhd3Q-unsplash-800x1000.jpg',
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
@@ -36,7 +36,7 @@ export const HotProduct = () => {
   ];
 
   return (
-    <Box sx={{ position: 'relative', height: 500, width: '100%' }}>
+    <Box sx={{ position: 'relative', height: {xs:2000, sm:300}, width: '100%' }}>
       <Box
         sx={{
           position: 'absolute',
@@ -52,22 +52,24 @@ export const HotProduct = () => {
                 <LatoTypo
                   sx={{
                     color: red['300'],
-                    letterSpacing: '4px',
+                    letterSpacing: '3px',
                     fontSize: { xs: 15, sm: 17 },
                     fontWeight: 400,
                   }}
                 >
-                  ADS FOR REALITY
+                  Biển hiệu quảng cáo
                 </LatoTypo>
-                <LatoTypo
+                <MulishTypo
                   sx={{
-                    fontSize: { xs: 40, sm: 46 },
-                    fontWeight: 600,
+                    fontSize: { xs: 32, sm: 40 },
+                    fontWeight: 900,
                     lineHeight: '1.2em',
+                    letterSpacing: 0,
+                    textTransform: 'uppercase',
                   }}
                 >
-                  The Billboard Advertising
-                </LatoTypo>
+                  Các mẫu nổi bật
+                </MulishTypo>
                 <MulishTypo
                   sx={{
                     fontSize: { xs: 14, sm: 16 },
@@ -86,7 +88,7 @@ export const HotProduct = () => {
                       letterSpacing: '3px',
                     }}
                   >
-                    Get started
+                    Đặt mẫu
                   </LatoTypo>
                 </BlackOutlinedBtn>
               </Stack>

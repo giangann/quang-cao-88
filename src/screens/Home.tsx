@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { Banner } from './Banner';
 import { Header } from './Header';
 import { HotProduct } from './HotProduct';
+import { Reason } from './Reason';
 
 export const Home = () => {
   return (
@@ -10,6 +11,7 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
+      <Reason/>
     </Box>
   );
 };

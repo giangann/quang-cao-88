@@ -1,0 +1,8 @@
+@font-face {
+  font-family: BayView;
+  src: url('../assets/fonts/Bayview.ttf');
+}
+
+.bay-view-font{
+    font-family: BayView !important;
+}

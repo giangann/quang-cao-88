@@ -6,6 +6,11 @@ import { red } from '../constants';
 import { LatoTypo, MulishTypo, WhiteOutlinedBtn } from '../styled';
 
 export const Banner = () => {
+  const introduce = [
+    'Bạn muốn thiết kế bảng hiệu cho cơ sở kinh doanh?',
+    'Bạn muốn setup quán Cafe để khởi nghiệp?',
+    'Hay đơn giản là cần tìm một đơn vị thiết kế bảng hiệu uy tín, chất lượng?',
+  ];
   const bgImage =
     'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/yu-kato2-ufZeqLJDG7c-unsplash.jpg';
   return (
@@ -38,13 +43,17 @@ export const Banner = () => {
             The New Level For <br />
             Billboard Advertising
           </LatoTypo>
-          <MulishTypo
-            sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 400, color: 'white' }}
-          >
-            Suspendisse in magna in elit hendrerit condimen. Phasellus eu justo mi. Proin
-            aliquet, mauris avol lobortis erat libero condimentum metus eutincidunt
-            ligulain turpis mauris avol lobortis erat libero mauris avol lobortis erat.
-          </MulishTypo>
+          <Box>
+            {introduce.map((sentence, index) => (
+              <MulishTypo
+                key={index}
+                sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 400, color: 'white' }}
+              >
+                {sentence}
+              </MulishTypo>
+            ))}
+          </Box>
+
           <WhiteOutlinedBtn sx={{ padding: '18px 35px', width: 200 }}>
             <LatoTypo
               sx={{
@@ -53,7 +62,7 @@ export const Banner = () => {
                 letterSpacing: '3px',
               }}
             >
-              Get started
+              Tư vấn ngay
             </LatoTypo>
           </WhiteOutlinedBtn>
         </Stack>
