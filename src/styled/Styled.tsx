@@ -73,3 +73,12 @@ export const GridCenter = styled(Grid)({
   justifyContent: 'center',
   alignItems: 'center',
 });
+
+export const textHoverStyle = {
+  cursor: 'pointer',
+
+  '&:hover': {
+    color: red['300'],
+    transition: '0.3s',
+  },
+};

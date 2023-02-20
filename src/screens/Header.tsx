@@ -15,7 +15,7 @@ import { useState } from 'react';
 
 import { CustomDrawer } from '../components';
 import { black, red } from '../constants';
-import { MulishTypo } from '../styled';
+import { MulishTypo, textHoverStyle } from '../styled';
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -76,6 +76,7 @@ export const Header = () => {
                     fontSize: 15,
                     color: black['900'],
                     fontWeight: 500,
+                    ...textHoverStyle,
                   }}
                 >
                   {page.name}
