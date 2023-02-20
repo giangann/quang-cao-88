@@ -36,7 +36,7 @@ export const HotProduct = () => {
   ];
 
   return (
-    <Box sx={{ position: 'relative', height: {xs:2000, sm:300}, width: '100%' }}>
+    <Box sx={{ position: 'relative', height: { xs: 2000, sm: 300 }, width: '100%' }}>
       <Box
         sx={{
           position: 'absolute',

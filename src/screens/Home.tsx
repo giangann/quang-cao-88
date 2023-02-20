@@ -11,7 +11,7 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
-      <Reason/>
+      <Reason />
     </Box>
   );
 };
