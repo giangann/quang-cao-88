@@ -6,9 +6,9 @@ import React from 'react';
 import { listFont } from '../constants';
 import { ChooseColor } from './ChooseColor';
 import { ChooseFont } from './ChooseFont';
+import { ChooseFontSize } from './ChooseFontSize';
 import { FontPreviewProps } from './FontPreview';
 import { TypeText } from './TypeText';
-import { ChooseFontSize } from './ChooseFontSize';
 
 interface TabPanelProps {
   children?: React.ReactNode;

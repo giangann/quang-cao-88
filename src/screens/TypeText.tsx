@@ -1,5 +1,6 @@
 import { Box, TextField } from '@mui/material';
 import { useAtom } from 'jotai';
+
 import { defaultPreviewAtom, previewAtom } from '../libs/atoms';
 
 export const TypeText = () => {

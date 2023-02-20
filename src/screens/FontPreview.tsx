@@ -2,10 +2,10 @@ import '../App.css';
 
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useAtom, useAtomValue } from 'jotai';
-
-import { previewAtom } from '../libs/atoms';
 import { useEffect } from 'react';
 import Draggable from 'react-draggable';
+
+import { previewAtom } from '../libs/atoms';
 
 export type FontPreviewProps = {
   text: string;

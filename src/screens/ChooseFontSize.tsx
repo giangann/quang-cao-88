@@ -1,5 +1,6 @@
 import { Box, Slider } from '@mui/material';
 import { useAtom } from 'jotai';
+
 import { previewAtom } from '../libs/atoms';
 import { MulishTypo } from '../styled';
 

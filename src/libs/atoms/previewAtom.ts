@@ -9,4 +9,4 @@ const defaultPreviewAtom = {
 };
 const previewAtom = atom(defaultPreviewAtom);
 
-export { previewAtom, defaultPreviewAtom };
+export { defaultPreviewAtom, previewAtom };
