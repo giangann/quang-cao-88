@@ -34,8 +34,6 @@ import {
 export const Contact = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const itemRef = useRef(null || 1);
-  const [itemHeight, setItemHeight] = useState(itemRef.current.clientHeight);
   const contactInfo = [
     {
       name: 'Địa chỉ',
@@ -83,9 +81,6 @@ export const Contact = () => {
     },
   ];
 
-  useEffect(() => {
-    setItemHeight(itemRef.current.clientHeight);
-  }, [itemRef.current.clientHeight]);
   const testImage =
     'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/portrait-of-smiling-business-team-working-in-modern-office-together-e1640485294113.jpg';
   return (
@@ -99,9 +94,9 @@ export const Contact = () => {
         </Box>
       </ImageWithFloatVerticalCard>
 
-      <Container sx={{ marginY: 14 }}>
-        <Grid container>
-          <Grid item xs={12} sm={4} ref={itemRef}>
+      <Container sx={{ marginY: { xs: 7, sm: 14 } }}>
+        <Grid container rowSpacing={3}>
+          <Grid item xs={12} sm={4}>
             <ContactCard
               backgroundColor={grey['500']}
               title="Thông tin"
@@ -111,7 +106,7 @@ export const Contact = () => {
                 {contactInfo.map((info, index) => (
                   <Grid container key={index}>
                     <GridCenterVertical
-                      sx={!index && { position: 'relative', top: -15 }}
+                      sx={!index ? { position: 'relative', top: -15 } : {}}
                       item
                       xs={2}
                     >
@@ -134,13 +129,12 @@ export const Contact = () => {
             </ContactCard>
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            sm={4}
-            sx={{ height: { xs: 'auto', sm: itemHeight - 20 - 64 || 287 } }}
-          >
-            <ContactCard title="Kết nối" height={{ xs: 'auto', sm: '100% !important' }}>
+          <Grid item xs={12} sm={4}>
+            <ContactCard
+              title="Kết nối"
+              height={isMobile ? 'auto' : 351}
+              boxSizing="border-box"
+            >
               <Box>
                 <ContactDescriptionTypo mb={4}>
                   Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod

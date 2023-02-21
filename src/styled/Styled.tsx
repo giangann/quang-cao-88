@@ -68,11 +68,15 @@ export const BlackOutlinedBtn = styled(Button)({
   },
 });
 
-export const ShadowBox = styled(Box)({
+export const ShadowBox = styled(Box)(({ theme }) => ({
   margin: '10px',
   boxShadow: '0px 0px 10px 0px rgb(79 79 79 / 10%)',
   transition: 'background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s',
-});
+
+  [theme.breakpoints.down('sm')]: {
+    margin: 0,
+  },
+}));
 
 export const LinkCustom = styled('a')({
   textDecoration: 'none',

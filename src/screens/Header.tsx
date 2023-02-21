@@ -21,6 +21,7 @@ export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const logoPath = '/logo.jpg';
   const pages = [
     {
       name: 'Về chúng tôi',
@@ -49,7 +50,10 @@ export const Header = () => {
         {/* For Desktop */}
         {!isMobile ? (
           <Toolbar sx={{ height: 90, paddingX: '0px !important' }}>
-            <Typography
+            <Box flexGrow={1} height="100%">
+              <img src={logoPath} style={{ height: '100%', width: 'auto' }} alt="logo" />
+            </Box>
+            {/* <Typography
               variant="h6"
               noWrap
               component="a"
@@ -67,7 +71,7 @@ export const Header = () => {
               }}
             >
               QC-88
-            </Typography>
+            </Typography> */}
             <Stack direction="row" spacing={8}>
               {pages.map((page: any) => (
                 <MulishTypo
