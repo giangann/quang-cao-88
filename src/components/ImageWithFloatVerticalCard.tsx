@@ -1,4 +1,5 @@
 import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
+
 import { black, grey } from '../constants';
 import { centerDiv, LayerBox, ShadowBox } from '../styled';
 import { BoxWithBackgroundAndLayer } from './BoxWithBackgroundAndLayer';

@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+
 import { ImageWithFloatVerticalCard } from '../components';
 import { black } from '../constants';
 import { MulishTypo, MulishTypoHeadingTitle } from '../styled';

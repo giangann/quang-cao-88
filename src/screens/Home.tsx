@@ -16,7 +16,7 @@ export const Home = () => {
       <HotProduct />
       <CustomizedProductFont />
       <Reason />
-      <Contact/>
+      <Contact />
     </Box>
   );
 };
