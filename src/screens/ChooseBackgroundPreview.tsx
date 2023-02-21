@@ -16,7 +16,7 @@ export const ChooseBackgroundPreview = () => {
   };
   return (
     <Box mt={3}>
-      <MulishTypo sx={{fontWeight:700}}>{`Thay đổi màu nền của bảng`}</MulishTypo>
+      <MulishTypo sx={{ fontWeight: 700 }}>{`Thay đổi màu nền của bảng`}</MulishTypo>
       <SketchPicker
         color={preview.backgroundViewColor}
         onChangeComplete={handleChangeBackgroundPreview}
