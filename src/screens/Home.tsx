@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 
-import { BoxWithParallaxBgImage } from '../components';
+import { BoxWithParallaxBgImage, GridViewForPreview } from '../components';
+import { black, grey, red } from '../constants';
 import { Banner } from './Banner';
 import { Contact } from './Contact';
 import { CustomizedProductFont } from './CustomizedProductFont';
@@ -10,11 +11,14 @@ import { Reason } from './Reason';
 
 export const Home = () => {
   const parallaxImgPath = '/logo.jpg';
+
+  const gridTransparentPath = './grid-transparent.png';
   return (
     <Box>
       <Header />
       <Banner />
       <HotProduct />
+      <GridViewForPreview borderColor={red['300']} backgroundColor="black" />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <CustomizedProductFont />
       <Reason />

@@ -4,3 +4,4 @@ export * from './BoxWithTileSubtitleDescription';
 export * from './CardWithIconAndDescription';
 export * from './CustomDrawer';
 export * from './ImageWithFloatVerticalCard';
+export * from './GridViewForPreview';
