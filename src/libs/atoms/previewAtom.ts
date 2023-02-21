@@ -6,6 +6,7 @@ const defaultPreviewAtom = {
   font: 'Bayview',
   color: 'pink',
   size: 70,
+  backgroundViewColor: 'black',
 };
 const previewAtom = atom(defaultPreviewAtom);
 

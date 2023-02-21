@@ -22,8 +22,6 @@ export const FontPreview = () => {
 
   const [preview, setPreview] = useAtom(previewAtom);
 
-  const bgImagePath = isMobile ? '/grid-mobile.png' : '/grid.jpg';
-
   useEffect(() => {
     setPreview({
       ...preview,
@@ -31,7 +29,10 @@ export const FontPreview = () => {
     });
   }, []);
   return (
-    <GridViewForPreview borderColor="#f44d4640" backgroundColor="black">
+    <GridViewForPreview
+      borderColor="#f44d4640"
+      backgroundColor={preview.backgroundViewColor}
+    >
       <Draggable>
         <Box
           sx={{

@@ -12,7 +12,7 @@ type GridViewForPreviewProps = {
 export const GridViewForPreview = (props: GridViewForPreviewProps) => {
   const { backgroundColor, borderColor, children, ...extraProps } = props;
 
-  const numberOfRows = 6;
+  const numberOfRows = 8;
   const numberOfColumns = 10;
 
   const gridTable = [];

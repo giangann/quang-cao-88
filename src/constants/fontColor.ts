@@ -44,7 +44,7 @@ export const listColorAndColorName = [
     slug: 'deep-blue',
   },
   {
-    name: 'Xanh ngọc',
+    name: 'Ngọc',
     slug: 'mint',
   },
 ];

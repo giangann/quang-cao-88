@@ -14,7 +14,7 @@ export const ChooseFontSize = () => {
     });
   };
   return (
-    <Box>
+    <Box mt={3}>
       <MulishTypo>{`Thay đổi kích thước chữ: ${preview.size}px`}</MulishTypo>
       <Slider
         aria-label="font-size"

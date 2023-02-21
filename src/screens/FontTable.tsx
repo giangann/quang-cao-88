@@ -9,6 +9,7 @@ import { ChooseFont } from './ChooseFont';
 import { ChooseFontSize } from './ChooseFontSize';
 import { FontPreviewProps } from './FontPreview';
 import { TypeText } from './TypeText';
+import { ChooseBackgroundPreview } from './ChooseBackgroundPreview';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -62,14 +63,16 @@ export const FontTable = () => {
       </Box>
       <TabPanel value={value} index={0}>
         <TypeText />
+        <ChooseFontSize />
       </TabPanel>
       <TabPanel value={value} index={1}>
         <ChooseFont />
+        <ChooseFontSize />
       </TabPanel>
       <TabPanel value={value} index={2}>
         <ChooseColor />
+        <ChooseBackgroundPreview />
       </TabPanel>
-      <ChooseFontSize />
     </Box>
   );
 };
