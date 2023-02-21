@@ -45,7 +45,11 @@ export const Header = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: 'white' }} elevation={0}>
+    <AppBar
+      position="static"
+      sx={{ backgroundColor: isMobile ? '#211F20' : 'white' }}
+      elevation={0}
+    >
       <Container>
         {/* For Desktop */}
         {!isMobile ? (
@@ -110,7 +114,7 @@ export const Header = () => {
                 <MenuIcon onClick={() => setOpenDrawer(true)} />
               </IconButton>
             </Box>
-            <Typography
+            {/* <Typography
               variant="h6"
               noWrap
               component="a"
@@ -131,7 +135,11 @@ export const Header = () => {
               }}
             >
               QuangCao88
-            </Typography>
+            </Typography> */}
+            <Box sx={{ margin: 'auto', height: '100%' }}>
+              <img src={logoPath} style={{ height: '100%', width: 'auto' }} alt="logo" />
+            </Box>
+
             <CustomDrawer open={openDrawer} onClose={handleCloseDrawer} item={pages} />
           </Toolbar>
         )}
