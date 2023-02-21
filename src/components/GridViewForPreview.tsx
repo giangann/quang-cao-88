@@ -1,14 +1,16 @@
 import { Box, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { borderColor } from '@mui/system';
+
 import { black } from '../constants';
-import { MulishTypo } from '../styled';
+import { centerDiv, LayerBox, MulishTypo } from '../styled';
 
 type GridViewForPreviewProps = {
   backgroundColor: string;
   borderColor: string;
+  children: React.ReactElement;
 } & React.CSSProperties;
 export const GridViewForPreview = (props: GridViewForPreviewProps) => {
-  const { backgroundColor, borderColor, ...extraProps } = props;
+  const { backgroundColor, borderColor, children, ...extraProps } = props;
 
   const numberOfRows = 6;
   const numberOfColumns = 10;
@@ -25,8 +27,15 @@ export const GridViewForPreview = (props: GridViewForPreviewProps) => {
     );
   }
   return (
-    <Box sx={{ backgroundColor: backgroundColor, p: { xs: "24px 8px 24px 28px", sm: 6 } }}>
+    <Box
+      sx={{
+        backgroundColor: backgroundColor,
+        p: { xs: '24px 8px 24px 28px', sm: '48px 16px 18px 56px' },
+        position: 'relative',
+      }}
+    >
       {gridTable}
+      <LayerBox sx={{...centerDiv}}>{children}</LayerBox>
     </Box>
   );
 };
@@ -45,7 +54,7 @@ const GridRow = (props: {
     gridRow.push(
       <Box
         sx={{
-          opacity: 0.5,
+          opacity: 0.8,
           position: !rowIndex || !colIndex ? 'relative' : 'static',
           width: { xs: 32, sm: 70 },
           height: { xs: 32, sm: 70 },

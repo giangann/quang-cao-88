@@ -13,7 +13,6 @@ export const BoxWithTileSubtitleDescription = (
   props: BoxWithTileSubtitleDescriptionProps & StackProps & TypographyProps,
 ) => {
   const { title, subTitle, description, extraAction, ...stackProps } = props;
-  console.log('typeof extraAction', typeof extraAction);
   return (
     <Box>
       <Stack spacing={2} {...stackProps}>

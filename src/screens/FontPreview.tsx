@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import Draggable from 'react-draggable';
 
 import { previewAtom } from '../libs/atoms';
+import { GridViewForPreview } from '../components';
+import { red } from '../constants';
 
 export type FontPreviewProps = {
   text: string;
@@ -29,23 +31,13 @@ export const FontPreview = () => {
     });
   }, []);
   return (
-    <Box
-      sx={{
-        background: `url(${bgImagePath})`,
-        backgroundSize: 'cover',
-        height: { xs: 450, sm: 750 },
-        // height: 'auto',
-        width: '100%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
+    <GridViewForPreview borderColor="#f44d4640" backgroundColor="black">
       <Draggable>
         <Box
           sx={{
             position: 'absolute',
             cursor: 'move',
+            zIndex: 10,
           }}
         >
           <span
@@ -59,6 +51,6 @@ export const FontPreview = () => {
           />
         </Box>
       </Draggable>
-    </Box>
+    </GridViewForPreview>
   );
 };

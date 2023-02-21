@@ -18,7 +18,6 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
-      <GridViewForPreview borderColor={red['300']} backgroundColor="black" />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <CustomizedProductFont />
       <Reason />
