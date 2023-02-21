@@ -1,4 +1,13 @@
-import { Box, Container, Grid, Stack, styled, Typography } from '@mui/material';
+import {
+  Box,
+  Container,
+  Grid,
+  Stack,
+  styled,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import { useEffect, useRef, useState } from 'react';
 
 import {
@@ -23,6 +32,8 @@ import {
 } from '../styled';
 
 export const Contact = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const itemRef = useRef(null || 1);
   const [itemHeight, setItemHeight] = useState(itemRef.current.clientHeight);
   const contactInfo = [
@@ -78,7 +89,7 @@ export const Contact = () => {
   const testImage =
     'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/portrait-of-smiling-business-team-working-in-modern-office-together-e1640485294113.jpg';
   return (
-    <>
+    <Box my={16}>
       <ImageWithFloatVerticalCard image={testImage}>
         <Box>
           <MulishTypoHeadingTitle mb={2}>Liên hệ</MulishTypoHeadingTitle>
@@ -88,7 +99,7 @@ export const Contact = () => {
         </Box>
       </ImageWithFloatVerticalCard>
 
-      <Container>
+      <Container sx={{ marginY: 14 }}>
         <Grid container>
           <Grid item xs={12} sm={4} ref={itemRef}>
             <ContactCard
@@ -123,8 +134,13 @@ export const Contact = () => {
             </ContactCard>
           </Grid>
 
-          <Grid item xs={12} sm={4} sx={{ height: itemHeight - 20 - 64 || 287 }}>
-            <ContactCard title="Kết nối" height="100% !important">
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            sx={{ height: { xs: 'auto', sm: itemHeight - 20 - 64 || 287 } }}
+          >
+            <ContactCard title="Kết nối" height={{ xs: 'auto', sm: '100% !important' }}>
               <Box>
                 <ContactDescriptionTypo mb={4}>
                   Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod
@@ -148,10 +164,21 @@ export const Contact = () => {
             </ContactCard>
           </Grid>
 
-          <Grid item xs={12} sm={4}></Grid>
+          <Grid item xs={12} sm={4}>
+            <iframe
+              title="quang-cao-88"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.604277549526!2d106.61105451539665!3d10.764950292329328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752c3bb962adc7%3A0x571f93f5e0dc81cf!2zMTA5IFRyxrDGoW5nIFBoxrDhu5tjIFBoYW4sIELDrG5oIFRy4buLIMSQw7RuZywgQsOsbmggVMOibiwgVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1676997595600!5m2!1svi!2s"
+              width="100%"
+              height={371 - 20}
+              style={{ border: 0, margin: isMobile ? 0 : 10, boxSizing: 'border-box' }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </Grid>
         </Grid>
       </Container>
-    </>
+    </Box>
   );
 };
 
