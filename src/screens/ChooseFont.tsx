@@ -24,7 +24,7 @@ export const ChooseFont = () => {
             // role="button"
             aria-hidden="true"
           >
-            <Typography sx={{ fontFamily: font, fontSize: 22, ...textHoverStyle }}>
+            <Typography sx={{ fontFamily: font, fontSize: 18, ...textHoverStyle }}>
               {font}
             </Typography>
           </div>

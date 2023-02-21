@@ -14,11 +14,13 @@ export type FontPreviewProps = {
   size: number;
 };
 export const FontPreview = () => {
+  // bg preview: {xs:343x450, sm:762x750}
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [preview, setPreview] = useAtom(previewAtom);
-  const bgImagePath = '/bgImageWithGridAndWaterMark.jpg';
+
+  const bgImagePath = isMobile ? '/grid-mobile.png' : '/grid.jpg';
 
   useEffect(() => {
     setPreview({
@@ -30,7 +32,9 @@ export const FontPreview = () => {
     <Box
       sx={{
         background: `url(${bgImagePath})`,
+        backgroundSize: 'cover',
         height: { xs: 450, sm: 750 },
+        // height: 'auto',
         width: '100%',
         display: 'flex',
         justifyContent: 'center',

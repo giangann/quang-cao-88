@@ -8,18 +8,19 @@ export const CustomizedProductFont = () => {
   return (
     <Container>
       <BoxWithTileSubtitleDescription
-        marginY={12}
+        marginY={4}
+        mt={12}
         title="Bảng chọn font chữ"
         subTitle="Thử các mẫu đề xuất"
         justifyContent="center"
         alignItems="center"
       />
       <Grid container spacing={2}>
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={8}>
           <FontPreview />
         </Grid>
 
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={4}>
           <FontTable />
         </Grid>
       </Grid>
