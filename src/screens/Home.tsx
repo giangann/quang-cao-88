@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 
-import { BoxWithParallaxBgImage } from '../components';
+import { BoxWithParallaxBgImage, ZaloFloatIcon } from '../components';
+import { PhoneFloatIcon } from '../components/PhoneFloatIcon';
 import { Banner } from './Banner';
 import { Contact } from './Contact';
 import { CustomizedProductFont } from './CustomizedProductFont';
@@ -21,6 +22,8 @@ export const Home = () => {
       <Reason />
       <Contact />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
+      <ZaloFloatIcon />
+      <PhoneFloatIcon />
     </Box>
   );
 };

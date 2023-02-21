@@ -2,6 +2,8 @@ export * from './BoxWithBackgroundAndLayer';
 export * from './BoxWithParallaxBgImage';
 export * from './BoxWithTileSubtitleDescription';
 export * from './CardWithIconAndDescription';
+export * from './ContactCard';
 export * from './CustomDrawer';
 export * from './GridViewForPreview';
 export * from './ImageWithFloatVerticalCard';
+export * from './ZaloFloatIcon';
