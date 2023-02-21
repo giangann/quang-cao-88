@@ -3,8 +3,8 @@ import { Box, BoxProps, SxProps } from '@mui/material';
 import { LayerBox } from '../styled';
 type BoxWithBackgroundAndLayerProps = {
   image?: string;
-  width?: string | BoxProps;
-  height?: string | BoxProps;
+  width?: string | number | BoxProps | React.CSSProperties;
+  height?: string | number | BoxProps | React.CSSProperties;
   backgroundPosition?: React.CSSProperties;
 };
 export const BoxWithBackgroundAndLayer = (

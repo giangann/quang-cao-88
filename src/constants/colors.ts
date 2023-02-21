@@ -8,3 +8,7 @@ export const black = {
   200: '#8c8e90',
   100: '#e5e5e5',
 };
+
+export const grey = {
+  500: '#F9F9F9',
+};

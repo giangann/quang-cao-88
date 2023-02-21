@@ -18,6 +18,19 @@ export const MulishTypo = styled(Typography)({
   fontFamily: 'Mulish',
 });
 
+export const MulishTypoHeadingTitle = styled(Typography)(({ theme }) => ({
+  fontFamily: 'Mulish',
+  fontSize: 40,
+  fontWeight: 900,
+  lineHeight: '1.2em',
+  letterSpacing: 0,
+  textTransform: 'uppercase',
+
+  [theme.breakpoints.down('sm')]: {
+    fontSize: 32,
+  },
+}));
+
 // export const OrangeContainedBtn = styled(Button)({
 //   borderRadius: 0,
 //   color: 'white',
@@ -55,6 +68,12 @@ export const BlackOutlinedBtn = styled(Button)({
   },
 });
 
+export const ShadowBox = styled(Box)({
+  margin: '10px',
+  boxShadow: '0px 0px 10px 0px rgb(79 79 79 / 10%)',
+  transition: 'background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s',
+});
+
 export const LinkCustom = styled('a')({
   textDecoration: 'none',
 });
@@ -81,4 +100,10 @@ export const textHoverStyle = {
     color: red['300'],
     transition: '0.3s',
   },
+};
+
+export const centerDiv = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
 };
