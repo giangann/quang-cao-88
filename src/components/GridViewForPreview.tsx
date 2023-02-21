@@ -35,7 +35,7 @@ export const GridViewForPreview = (props: GridViewForPreviewProps) => {
       }}
     >
       {gridTable}
-      <LayerBox sx={{...centerDiv}}>{children}</LayerBox>
+      <LayerBox sx={{ ...centerDiv }}>{children}</LayerBox>
     </Box>
   );
 };

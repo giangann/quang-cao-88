@@ -5,9 +5,9 @@ import { useAtom, useAtomValue } from 'jotai';
 import { useEffect } from 'react';
 import Draggable from 'react-draggable';
 
-import { previewAtom } from '../libs/atoms';
 import { GridViewForPreview } from '../components';
 import { red } from '../constants';
+import { previewAtom } from '../libs/atoms';
 
 export type FontPreviewProps = {
   text: string;
