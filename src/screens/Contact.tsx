@@ -84,7 +84,7 @@ export const Contact = () => {
   const testImage =
     'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/portrait-of-smiling-business-team-working-in-modern-office-together-e1640485294113.jpg';
   return (
-    <Box my={16}>
+    <Box mt={16} mb={{ xs: 0, sm: 16 }}>
       <ImageWithFloatVerticalCard image={testImage}>
         <Box>
           <MulishTypoHeadingTitle mb={2}>Liên hệ</MulishTypoHeadingTitle>
