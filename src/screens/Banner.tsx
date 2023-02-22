@@ -1,11 +1,27 @@
-import { Box, Container, Stack, Typography } from '@mui/material';
+import {
+  Box,
+  Container,
+  Stack,
+  Typography,
+  useMediaQuery,
+  useTheme,
+} from '@mui/material';
 import React from 'react';
 
 import { BoxWithBackgroundAndLayer } from '../components';
-import { red } from '../constants';
-import { LatoTypo, MulishTypo, WhiteOutlinedBtn } from '../styled';
+import { red, ZALO_LINK } from '../constants';
+import Typed from 'react-typed';
+import {
+  LatoTypo,
+  MulishTypo,
+  MulishTypoHeadingTitle,
+  WhiteOutlinedBtn,
+} from '../styled';
 
 export const Banner = () => {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
   const introduce = [
     'Bạn muốn thiết kế bảng hiệu cho cơ sở kinh doanh?',
     'Bạn muốn setup quán Cafe để khởi nghiệp?',
@@ -30,31 +46,46 @@ export const Banner = () => {
               fontWeight: 400,
             }}
           >
-            ADS FOR REALITY
+            Thiết kế, thi công bảng hiệu quảng cáo chuyên nghiệp tại Hồ Chí Minh
           </LatoTypo>
-          <LatoTypo
+          <MulishTypoHeadingTitle
             sx={{
               color: 'white',
               fontSize: { xs: 40, sm: 60 },
-              fontWeight: 600,
+              // fontWeight: 600,
               lineHeight: '1.2em',
+              textTransform: 'uppercase',
             }}
           >
-            The New Level For <br />
-            Billboard Advertising
-          </LatoTypo>
+            Quảng cáo 88
+          </MulishTypoHeadingTitle>
           <Box>
-            {introduce.map((sentence, index) => (
-              <MulishTypo
-                key={index}
-                sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 400, color: 'white' }}
-              >
-                {sentence}
-              </MulishTypo>
-            ))}
+            <Typed
+              style={{
+                color: 'white',
+                fontSize: isMobile ? 14 : 16,
+                fontWeight: 400,
+              }}
+              strings={introduce}
+              typeSpeed={20}
+              backSpeed={1}
+            />
+            {/* {introduce.map((sentence, index) => (
+              <Box key={index}>
+                <MulishTypo
+                  key={index}
+                  sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 400, color: 'white' }}
+                >
+                  {sentence}
+                </MulishTypo>
+              </Box>
+            ))} */}
           </Box>
 
-          <WhiteOutlinedBtn sx={{ padding: '18px 35px', width: 200 }}>
+          <WhiteOutlinedBtn
+            sx={{ padding: '18px 35px', width: 200 }}
+            onClick={() => window.open(ZALO_LINK, '_blank')}
+          >
             <LatoTypo
               sx={{
                 textTransform: 'uppercase',

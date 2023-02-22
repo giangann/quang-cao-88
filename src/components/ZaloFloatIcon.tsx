@@ -1,8 +1,8 @@
 import '../styled/style.css';
 
-import { Box, useMediaQuery, useTheme } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
+import { ZALO_LINK } from '../constants';
 
-import { ZaloLiveIconPath } from '../assets/icons';
 
 export const ZaloFloatIcon = () => {
   const theme = useTheme();
@@ -13,7 +13,7 @@ export const ZaloFloatIcon = () => {
       <div className="rotate"></div>
       <a
         className="zalo_btn"
-        href="https://zalo.me/0901773236"
+        href={ZALO_LINK}
         target="_blank"
         title="Liên hệ qua Zalo"
         rel="noreferrer"

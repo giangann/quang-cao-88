@@ -11,4 +11,6 @@ export const black = {
 
 export const grey = {
   500: '#F9F9F9',
+  600: '#F3F3F3',
+  700: '#EDEDED',
 };
