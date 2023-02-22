@@ -16,6 +16,7 @@ import {
   useMediaQuery,
   useTheme,
 } from '@mui/material';
+
 import {
   FluentScanThumbUp20Regular,
   IcBaselineLockClock,
@@ -77,7 +78,7 @@ export const AboutUs = () => {
     },
   ];
   return (
-    <Container sx={{my:16}}>
+    <Container sx={{ my: 16 }}>
       {/* title + intro block */}
       <Grid container mb={4}>
         <Grid item xs={12} sm={6}>

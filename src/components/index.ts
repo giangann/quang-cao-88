@@ -1,3 +1,4 @@
+export * from './AboutCard';
 export * from './BoxWithBackgroundAndLayer';
 export * from './BoxWithParallaxBgImage';
 export * from './BoxWithTileSubtitleDescription';
@@ -7,4 +8,3 @@ export * from './CustomDrawer';
 export * from './GridViewForPreview';
 export * from './ImageWithFloatVerticalCard';
 export * from './ZaloFloatIcon';
-export * from './AboutCard';

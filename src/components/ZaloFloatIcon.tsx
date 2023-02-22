@@ -1,8 +1,8 @@
 import '../styled/style.css';
 
 import { useMediaQuery, useTheme } from '@mui/material';
-import { ZALO_LINK } from '../constants';
 
+import { ZALO_LINK } from '../constants';
 
 export const ZaloFloatIcon = () => {
   const theme = useTheme();

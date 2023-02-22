@@ -7,10 +7,10 @@ import {
   useTheme,
 } from '@mui/material';
 import React from 'react';
+import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
 import { red, ZALO_LINK } from '../constants';
-import Typed from 'react-typed';
 import {
   LatoTypo,
   MulishTypo,
