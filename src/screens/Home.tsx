@@ -19,7 +19,7 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
-      <RecentProduct/>
+      <RecentProduct />
       <CustomizedProductFont />
       <AboutUs />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />

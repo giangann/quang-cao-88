@@ -1,4 +1,5 @@
 import { Box, Container, Grid } from '@mui/material';
+
 import { BoxWithTileSubtitleDescription } from '../components';
 import { NEON_FOLDER_PATH } from '../constants';
 import { ProductItem } from './ProductItem';

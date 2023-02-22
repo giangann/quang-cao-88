@@ -1,4 +1,4 @@
-import { Stack, useTheme, useMediaQuery } from '@mui/material';
+import { Stack, useMediaQuery, useTheme } from '@mui/material';
 
 import { black, DEFAULT_PRODUCT_DESCRIPTION, red, ZALO_LINK } from '../constants';
 import { LatoTypo, LinkCustom, MulishTypo } from '../styled';
