@@ -14,14 +14,14 @@ import {
 import { useState } from 'react';
 
 import { CustomDrawer } from '../components';
-import { black, red } from '../constants';
+import { black, LOGO, red } from '../constants';
 import { MulishTypo, textHoverStyle } from '../styled';
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const logoPath = '/logo.png';
+  const logoPath = LOGO;
   const pages = [
     {
       name: 'Về chúng tôi',
@@ -57,25 +57,6 @@ export const Header = () => {
             <Box flexGrow={1} height="100%">
               <img src={logoPath} style={{ height: '100%', width: 'auto' }} alt="logo" />
             </Box>
-            {/* <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/home"
-              sx={{
-                flexGrow: 1,
-                mr: 2,
-                display: { xs: 'none', md: 'block' },
-                fontSize: 32,
-                fontFamily: 'monospace',
-                fontWeight: 600,
-                letterSpacing: '.2rem',
-                color: 'black',
-                textDecoration: 'none',
-              }}
-            >
-              QC-88
-            </Typography> */}
             <Stack direction="row" spacing={8}>
               {pages.map((page: any) => (
                 <MulishTypo

@@ -10,7 +10,7 @@ import React from 'react';
 import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
-import { red, ZALO_LINK } from '../constants';
+import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
 import {
   LatoTypo,
   MulishTypo,
@@ -27,9 +27,10 @@ export const Banner = () => {
     'Bạn muốn setup quán Cafe để khởi nghiệp?',
     'Hay đơn giản là cần tìm một đơn vị thiết kế bảng hiệu uy tín, chất lượng?',
   ];
-  // const bgImage =
-  //   'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/yu-kato2-ufZeqLJDG7c-unsplash.jpg';
-  const bgImage = '/banner.jpg';
+
+  const bgImage = BANNER;
+  const logoPath = LOGO_REMOVE_BG;
+
   return (
     <BoxWithBackgroundAndLayer
       width="100%"
@@ -37,41 +38,70 @@ export const Banner = () => {
       image={bgImage}
       sx={{ backgroundColor: 'black', opacity: 0.7, backgroundSize: 'cover' }}
     >
-      <Container>
-        <Stack spacing={3} mt={{ xs: 20, sm: 30 }}>
-          <LatoTypo
-            sx={{
-              color: red['300'],
-              letterSpacing: '4px',
-              fontSize: { xs: 15, sm: 17 },
-              fontWeight: 400,
-            }}
+      <>
+        <Box
+          sx={
+            isMobile
+              ? {
+                  position: 'absolute',
+                  opacity: 0.3,
+                  bottom: 0,
+                  right: '0',
+                }
+              : {
+                  position: 'absolute',
+                  opacity: 0.3,
+                  top: { xs: 300, sm: 200 },
+                  right: { xs: 0, sm: 200 },
+                }
+          }
+        >
+          <img
+            src={logoPath}
+            style={{ height: isMobile ? 300 : '100%', width: 'auto' }}
+            alt="logo"
+          />
+        </Box>
+        <Container sx={isMobile ? { position: 'relative', top: -100 } : {}}>
+          <Stack
+            sx={isMobile ? { alignItems: 'center' } : {}}
+            spacing={3}
+            mt={{ xs: 20, sm: 30 }}
           >
-            Thiết kế, thi công bảng hiệu quảng cáo chuyên nghiệp tại Hồ Chí Minh
-          </LatoTypo>
-          <MulishTypoHeadingTitle
-            sx={{
-              color: 'white',
-              fontSize: { xs: 40, sm: 60 },
-              // fontWeight: 600,
-              lineHeight: '1.2em',
-              textTransform: 'uppercase',
-            }}
-          >
-            Quảng cáo 88
-          </MulishTypoHeadingTitle>
-          <Box>
-            <Typed
-              style={{
-                color: 'white',
-                fontSize: isMobile ? 14 : 16,
+            <LatoTypo
+              sx={{
+                color: red['300'],
+                letterSpacing: '4px',
+                fontSize: { xs: 15, sm: 17 },
                 fontWeight: 400,
+                textAlign: { xs: 'center', sm: 'unset' },
               }}
-              strings={introduce}
-              typeSpeed={20}
-              backSpeed={1}
-            />
-            {/* {introduce.map((sentence, index) => (
+            >
+              Thiết kế, thi công bảng hiệu quảng cáo chuyên nghiệp tại Hồ Chí Minh
+            </LatoTypo>
+            <MulishTypoHeadingTitle
+              sx={{
+                color: 'white',
+                fontSize: { xs: 40, sm: 60 },
+                // fontWeight: 600,
+                lineHeight: '1.2em',
+                textTransform: 'uppercase',
+              }}
+            >
+              Quảng cáo 88
+            </MulishTypoHeadingTitle>
+            <Box>
+              <Typed
+                style={{
+                  color: 'white',
+                  fontSize: isMobile ? 14 : 16,
+                  fontWeight: 400,
+                }}
+                strings={introduce}
+                typeSpeed={20}
+                backSpeed={1}
+              />
+              {/* {introduce.map((sentence, index) => (
               <Box key={index}>
                 <MulishTypo
                   key={index}
@@ -81,24 +111,25 @@ export const Banner = () => {
                 </MulishTypo>
               </Box>
             ))} */}
-          </Box>
+            </Box>
 
-          <WhiteOutlinedBtn
-            sx={{ padding: '18px 35px', width: 200 }}
-            onClick={() => window.open(ZALO_LINK, '_blank')}
-          >
-            <LatoTypo
-              sx={{
-                textTransform: 'uppercase',
-                fontSize: { xs: 13, sm: 14 },
-                letterSpacing: '3px',
-              }}
+            <WhiteOutlinedBtn
+              sx={{ padding: '18px 35px', width: 200 }}
+              onClick={() => window.open(ZALO_LINK, '_blank')}
             >
-              Tư vấn ngay
-            </LatoTypo>
-          </WhiteOutlinedBtn>
-        </Stack>
-      </Container>
+              <LatoTypo
+                sx={{
+                  textTransform: 'uppercase',
+                  fontSize: { xs: 13, sm: 14 },
+                  letterSpacing: '3px',
+                }}
+              >
+                Tư vấn ngay
+              </LatoTypo>
+            </WhiteOutlinedBtn>
+          </Stack>
+        </Container>
+      </>
     </BoxWithBackgroundAndLayer>
   );
 };

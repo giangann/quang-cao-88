@@ -4,3 +4,6 @@ export const NEON_FOLDER_PATH = '/neon';
 
 export const DEFAULT_PRODUCT_DESCRIPTION =
   'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.';
+export const LOGO_REMOVE_BG = '/logo-removebg.png';
+export const LOGO = '/logo.png';
+export const BANNER = '/banner.jpg';
