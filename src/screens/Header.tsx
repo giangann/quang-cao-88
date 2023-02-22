@@ -21,7 +21,7 @@ export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const logoPath = '/logo.jpg';
+  const logoPath = '/logo.png';
   const pages = [
     {
       name: 'Về chúng tôi',

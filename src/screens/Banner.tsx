@@ -27,14 +27,15 @@ export const Banner = () => {
     'Bạn muốn setup quán Cafe để khởi nghiệp?',
     'Hay đơn giản là cần tìm một đơn vị thiết kế bảng hiệu uy tín, chất lượng?',
   ];
-  const bgImage =
-    'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/yu-kato2-ufZeqLJDG7c-unsplash.jpg';
+  // const bgImage =
+  //   'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/yu-kato2-ufZeqLJDG7c-unsplash.jpg';
+  const bgImage = '/banner.jpg';
   return (
     <BoxWithBackgroundAndLayer
       width="100%"
       height="100vh"
       image={bgImage}
-      sx={{ backgroundColor: 'black', opacity: 0.7 }}
+      sx={{ backgroundColor: 'black', opacity: 0.7, backgroundSize: 'cover' }}
     >
       <Container>
         <Stack spacing={3} mt={{ xs: 20, sm: 30 }}>

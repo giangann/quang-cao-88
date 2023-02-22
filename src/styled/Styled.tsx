@@ -31,19 +31,6 @@ export const MulishTypoHeadingTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
-// export const OrangeContainedBtn = styled(Button)({
-//   borderRadius: 0,
-//   color: 'white',
-//   backgroundColor: orange['400'],
-//   border: `1px solid ${orange['400']}`,
-
-//   '&:hover': {
-//     color: orange['400'],
-//     backgroundColor: 'transparent',
-//     transition: '1s',
-//   },
-// });
-
 export const WhiteOutlinedBtn = styled(Button)({
   borderRadius: 0,
   border: `1px solid white`,
