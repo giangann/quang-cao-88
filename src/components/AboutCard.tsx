@@ -21,7 +21,12 @@ export const AboutCard = (props: AboutCardProps) => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <Box p={5} height="100%" boxSizing="border-box" {...boxProps}>
+    <Box
+      p={{ xs: '20px 20px 25px', sm: 5 }}
+      height="100%"
+      boxSizing="border-box"
+      {...boxProps}
+    >
       <BoxBorderBottom>
         <Stack
           spacing={2}
@@ -33,13 +38,13 @@ export const AboutCard = (props: AboutCardProps) => {
           alignItems="base-line"
           justifyContent="space-between"
         >
-          <LatoFontCardTitle sx={{ mb: 2 }}>{title}</LatoFontCardTitle>
+          <LatoFontCardTitle>{title}</LatoFontCardTitle>
           <Box sx={isMobile ? {} : { position: 'relative', left: -6, top: 6 }}>
             {icon}
           </Box>
         </Stack>
       </BoxBorderBottom>
-      <MulishFontCardDescription sx={{ marginY: 3 }}>
+      <MulishFontCardDescription sx={{ marginY: { xs: 2, sm: 3 } }}>
         {description}
       </MulishFontCardDescription>
       <LinkCustom href={ZALO_LINK} target="_blank">
@@ -64,7 +69,9 @@ const LatoFontCardAction = styled(Typography)(({ theme }) => ({
   letterSpacing: '3px',
   fontWeight: 500,
   textTransform: 'uppercase',
-  [theme.breakpoints.down('sm')]: {},
+  [theme.breakpoints.down('sm')]: {
+    fontSize: 13,
+  },
 }));
 
 export const MulishFontCardDescription = styled(Typography)(({ theme }) => ({
@@ -76,7 +83,7 @@ export const MulishFontCardDescription = styled(Typography)(({ theme }) => ({
 }));
 
 const BoxBorderBottom = styled(Box)(({ theme }) => ({
-  paddingBottom: '12px',
+  paddingBottom: '20px',
   borderBottom: `1px solid ${black['100']}`,
   [theme.breakpoints.down('sm')]: {},
 }));
