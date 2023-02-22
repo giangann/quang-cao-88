@@ -9,6 +9,7 @@ import { CustomizedProductFont } from './CustomizedProductFont';
 import { Header } from './Header';
 import { HotProduct } from './HotProduct';
 import { Reason } from './Reason';
+import { RecentProduct } from './RecentProduct';
 
 export const Home = () => {
   const parallaxImgPath = '/logo.jpg';
@@ -18,9 +19,10 @@ export const Home = () => {
       <Header />
       <Banner />
       <HotProduct />
+      <RecentProduct/>
+      <CustomizedProductFont />
       <AboutUs />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
-      <CustomizedProductFont />
       <Reason />
       <Contact />
       {/* <BoxWithParallaxBgImage imgPath={parallaxImgPath} /> */}
