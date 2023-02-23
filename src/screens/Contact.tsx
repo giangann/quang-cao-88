@@ -98,7 +98,7 @@ export const Contact = () => {
         <Grid container rowSpacing={3}>
           <Grid item xs={12} sm={4}>
             <ContactCard
-              backgroundColor={grey['500']}
+              backgroundColor={grey['600']}
               title="Thông tin"
               boxShadow="none !important"
             >

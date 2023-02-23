@@ -24,7 +24,7 @@ export const ImageWithFloatVerticalCard = (props: ImageWithFloatVerticalCardProp
       width="100%"
     >
       <Grid container sx={{ height: '100%' }}>
-        <Grid item xs={3} sx={{ backgroundColor: grey['500'], position: 'relative' }}>
+        <Grid item xs={3} sx={{ backgroundColor: grey['600'], position: 'relative' }}>
           <LayerBox
             sx={{
               ...centerDiv,

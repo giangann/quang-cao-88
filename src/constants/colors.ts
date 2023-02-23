@@ -14,3 +14,7 @@ export const grey = {
   600: '#F3F3F3',
   700: '#EDEDED',
 };
+
+export const white = {
+  900: '#fdfdfd',
+};

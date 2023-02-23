@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 
 import { BoxWithParallaxBgImage, ZaloFloatIcon } from '../components';
 import { PhoneFloatIcon } from '../components/PhoneFloatIcon';
+import { black, grey } from '../constants';
 import { AboutUs } from './AboutUs';
 import { Banner } from './Banner';
 import { Contact } from './Contact';
@@ -15,7 +16,7 @@ export const Home = () => {
   const parallaxImgPath = '/logo.jpg';
 
   return (
-    <Box>
+    <Box sx={{backgroundColor:grey['500']}}>
       <Header />
       <Banner />
       <HotProduct />

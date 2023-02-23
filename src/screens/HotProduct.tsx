@@ -148,7 +148,9 @@ export const HotProduct = () => {
           width: '100%',
         }}
       >
-        <Container sx={{ backgroundColor: 'white' }}>
+        <Container
+          sx={{ backgroundColor: 'white', pb: { xs: 4, sm: isViewAll ? 12 : 0 } }}
+        >
           {/* 3 top product */}
           <Grid container spacing={5} sx={{ px: { xs: 0, sm: 2 } }}>
             <GridCenterVertical item xs={12} sm={3}>

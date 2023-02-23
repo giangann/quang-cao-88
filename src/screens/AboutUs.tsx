@@ -29,7 +29,7 @@ import {
   BoxWithTileSubtitleDescription,
   MulishFontCardDescription,
 } from '../components';
-import { black, grey } from '../constants';
+import { black, grey, white } from '../constants';
 const desc =
   'Một biển hiệu quảng cáo hiệu quả giúp truyền tải thông tin, hình ảnh, slogan hay hình ảnh sản phẩm của công ty tốt hơn rất nhiều so với những mảng quảng cáo khác. Giúp tiếp cận được một lượng lớn khách hàng tiềm năng, những người có khi chỉ nhìn thấy hình ảnh quảng cáo của bạn; đã cảm thấy ấn tượng và họ tìm mua';
 const about =
@@ -40,7 +40,7 @@ export const AboutUs = () => {
 
   const adsIntroduce = [
     {
-      bgColor: grey['500'],
+      bgColor: white['900'],
       title: 'Cơ sở kinh doanh',
       description: 'Bạn muốn thiết kế bảng hiệu cho cơ sở kinh doanh?',
       icon: (

@@ -62,9 +62,9 @@ export const Header = () => {
                 <MulishTypo
                   key={page.name}
                   sx={{
-                    fontSize: 15,
+                    fontSize: 18,
                     color: black['900'],
-                    fontWeight: 500,
+                    fontWeight: 700,
                     ...textHoverStyle,
                   }}
                 >
