@@ -1,5 +1,6 @@
 import 'react-alice-carousel/lib/alice-carousel.css';
-import { Box, Container, Stack, useTheme, useMediaQuery } from '@mui/material';
+
+import { Box, Container, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { Grid } from '@mui/material';
 import React, { useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';

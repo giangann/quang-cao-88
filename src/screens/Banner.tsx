@@ -1,17 +1,9 @@
-import {
-  Box,
-  Container,
-  Stack, useMediaQuery,
-  useTheme
-} from '@mui/material';
+import { Box, Container, Stack, useMediaQuery, useTheme } from '@mui/material';
 import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
-import {
-  LatoTypo, MulishTypoHeadingTitle,
-  WhiteOutlinedBtn
-} from '../styled';
+import { LatoTypo, MulishTypoHeadingTitle, WhiteOutlinedBtn } from '../styled';
 
 export const Banner = () => {
   const theme = useTheme();
