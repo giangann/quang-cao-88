@@ -9,3 +9,75 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.alice-carousel__stage-item {
+  height: 100% !important;
+}
+
+.alice-carousel__stage {
+  height: 100% !important;
+}
+
+.alice-carousel__wrapper {
+  height: 100% !important;
+}
+
+.alice-carousel__prev-btn {
+  /* display: none !important; */
+  position: absolute;
+  top: 40%;
+  left: -32px;
+  height: unset;
+  text-align: left !important;
+}
+.alice-carousel__next-btn {
+  /* display: none !important; */
+  position: absolute;
+  top: 40%;
+  right: -32px;
+  height: unset;
+  text-align: right;
+}
+
+.alice-carousel__prev-btn-item {
+  font-size: 32px !important;
+  color: black !important;
+}
+
+.alice-carousel__next-btn-item {
+  font-size: 32px !important;
+  color: black !important;
+}
+.alice-carousel__dots {
+  height: fit-content;
+  margin: 16px 0 0 !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .alice-carousel__prev-btn {
+    /* display: none !important; */
+    position: absolute;
+    top: 40%;
+    left: -16px;
+    height: unset;
+    text-align: left !important;
+  }
+  .alice-carousel__next-btn {
+    /* display: none !important; */
+    position: absolute;
+    top: 40%;
+    right: -16px;
+    height: unset;
+    text-align: right;
+  }
+
+  .alice-carousel__prev-btn-item {
+    font-size: 24px !important;
+    color: black !important;
+  }
+
+  .alice-carousel__next-btn-item {
+    font-size: 24px !important;
+    color: black !important;
+  }
+}

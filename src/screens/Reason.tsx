@@ -56,23 +56,6 @@ export const Reason = () => {
   ];
   return (
     <Container sx={{ my: 8 }}>
-      {/* <MulishTypo
-        sx={{
-          fontSize: { xs: 32, sm: 40 },
-          fontWeight: 900,
-          lineHeight: '1.2em',
-          letterSpacing: 0,
-          textTransform: 'uppercase',
-        }}
-      >
-        Lý do chọn chúng tôi
-      </MulishTypo> */}
-      {/* <BoxWithTileSubtitleDescription
-        alignItems="center"
-        title="Lý do chọn chúng tôi"
-        subTitle="Biển hiệu quảng cáo"
-        description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa ligula eget."
-      /> */}
       <Grid container sx={{ mt: 4 }} spacing={4}>
         <GridCenterVertical item xs={12} sm={4} order={{ xs: 2, sm: 1 }}>
           <Box>

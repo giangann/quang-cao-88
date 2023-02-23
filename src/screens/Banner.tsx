@@ -1,21 +1,16 @@
 import {
   Box,
   Container,
-  Stack,
-  Typography,
-  useMediaQuery,
-  useTheme,
+  Stack, useMediaQuery,
+  useTheme
 } from '@mui/material';
-import React from 'react';
 import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
 import {
-  LatoTypo,
-  MulishTypo,
-  MulishTypoHeadingTitle,
-  WhiteOutlinedBtn,
+  LatoTypo, MulishTypoHeadingTitle,
+  WhiteOutlinedBtn
 } from '../styled';
 
 export const Banner = () => {
@@ -101,16 +96,6 @@ export const Banner = () => {
                 typeSpeed={20}
                 backSpeed={1}
               />
-              {/* {introduce.map((sentence, index) => (
-              <Box key={index}>
-                <MulishTypo
-                  key={index}
-                  sx={{ fontSize: { xs: 14, sm: 16 }, fontWeight: 400, color: 'white' }}
-                >
-                  {sentence}
-                </MulishTypo>
-              </Box>
-            ))} */}
             </Box>
 
             <WhiteOutlinedBtn

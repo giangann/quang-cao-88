@@ -38,7 +38,7 @@ export const AboutCard = (props: AboutCardProps) => {
           alignItems="base-line"
           justifyContent="space-between"
         >
-          <LatoFontCardTitle>{title}</LatoFontCardTitle>
+          <MulishFontCardTitle>{title}</MulishFontCardTitle>
           <Box sx={isMobile ? {} : { position: 'relative', left: -6, top: 6 }}>
             {icon}
           </Box>
@@ -54,12 +54,14 @@ export const AboutCard = (props: AboutCardProps) => {
   );
 };
 
-const LatoFontCardTitle = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Lato',
-  fontSize: 26,
+const MulishFontCardTitle = styled(Typography)(({ theme }) => ({
+  fontFamily: 'Mulish',
+  fontSize: 24,
   color: black['900'],
-  fontWeight: 600,
-  [theme.breakpoints.down('sm')]: {},
+  fontWeight: 800,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: 20,
+  },
 }));
 
 const LatoFontCardAction = styled(Typography)(({ theme }) => ({

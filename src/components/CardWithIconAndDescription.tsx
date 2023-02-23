@@ -17,9 +17,11 @@ export const CardWithIconAndDescription = (
     <Box sx={{ border: `1px solid ${black['100']}`, p: 6, pt: 7, ...boxProps }}>
       <Stack spacing={2}>
         {icon}
-        <LatoTypo sx={{ fontSize: 28, fontWeight: 600, color: 'black' }}>
+        <MulishTypo
+          sx={{ fontSize: { xs: 22, sm: 26 }, fontWeight: 700, color: 'black' }}
+        >
           {title}
-        </LatoTypo>
+        </MulishTypo>
         <MulishTypo sx={{ color: 'black', fontSize: 16, fontWeight: 400 }}>
           {description}
         </MulishTypo>

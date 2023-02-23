@@ -43,6 +43,19 @@ export const WhiteOutlinedBtn = styled(Button)({
   },
 });
 
+export const RedContainedBtn = styled(Button)({
+  borderRadius: 0,
+  border: `1px solid ${red['300']}`,
+  color: 'black',
+  backgroundColor: red['300'],
+  '&:hover': {
+    color: 'black',
+    backgroundColor: 'transparent',
+    transition: '1s',
+    border: `1px solid black`,
+  },
+});
+
 export const BlackOutlinedBtn = styled(Button)({
   borderRadius: 0,
   border: `1px solid black`,

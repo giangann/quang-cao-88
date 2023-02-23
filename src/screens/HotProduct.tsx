@@ -1,42 +1,144 @@
-import { Box, Container, Stack } from '@mui/material';
+import 'react-alice-carousel/lib/alice-carousel.css';
+import { Box, Container, Stack, useTheme, useMediaQuery } from '@mui/material';
 import { Grid } from '@mui/material';
+import React, { useState } from 'react';
+import AliceCarousel from 'react-alice-carousel';
 
-import { black, red } from '../constants';
+import {
+  black,
+  DEFAULT_PRODUCT_DESCRIPTION,
+  REAL_PRODUCT_FOLDER_PATH,
+  red,
+} from '../constants';
 import {
   BlackOutlinedBtn,
+  centerDiv,
   GridCenterVertical,
   LatoTypo,
   MulishTypo,
+  RedContainedBtn,
   WhiteOutlinedBtn,
 } from '../styled';
+import { ProductItem } from './ProductItem';
 
 export const HotProduct = () => {
+  // const hotProducts = [
+  //   {
+  //     name: 'Bán quần áo',
+  //     image:
+  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/bryan-lobos-v6Y5j53HmCw-unsplash.jpg',
+  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
+  //     price: '10.500.000 VND',
+  //   },
+  //   {
+  //     name: 'Quán ăn',
+  //     image:
+  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/matthew-smith-raeh5UIJixs-unsplash-800x1000.jpg',
+  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
+  //     price: '15.530.000 VND',
+  //   },
+  //   {
+  //     name: 'Rạp chiếu phim',
+  //     image:
+  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/ryunosuke-kikuno-3UDme-mhd3Q-unsplash-800x1000.jpg',
+  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
+  //     price: '9.567.000 VND',
+  //   },
+  // ];
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  console.log('is Mobile', isMobile);
+  const boxHeight = isMobile ? 250 : 300;
+
+  const initialHeight = isMobile ? 1200 : 400;
+  console.log('initialHeight', initialHeight);
+  const [height, setHeight] = useState(initialHeight);
+
+  const [boxHeightCounter, setBoxHeightCounter] = useState(0);
+  const [isViewAll, setIsViewAll] = useState(false);
+
+  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
   const hotProducts = [
     {
       name: 'Bán quần áo',
-      image:
-        'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/bryan-lobos-v6Y5j53HmCw-unsplash.jpg',
+      image: `${REAL_PRODUCT_FOLDER_PATH}/product21.jpg`,
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
       price: '10.500.000 VND',
     },
     {
       name: 'Quán ăn',
-      image:
-        'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/matthew-smith-raeh5UIJixs-unsplash-800x1000.jpg',
+      image: `${REAL_PRODUCT_FOLDER_PATH}/product2.jpg`,
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
       price: '15.530.000 VND',
     },
     {
       name: 'Rạp chiếu phim',
-      image:
-        'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/ryunosuke-kikuno-3UDme-mhd3Q-unsplash-800x1000.jpg',
+      image: `${REAL_PRODUCT_FOLDER_PATH}/product3.jpg`,
       description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
       price: '9.567.000 VND',
     },
   ];
 
+  const carouselItem = [];
+  for (let i = 0; i < 23; i++) {
+    carouselItem.push(
+      <Stack spacing={1} px={2}>
+        <img
+          src={`${REAL_PRODUCT_FOLDER_PATH}/product${i + 1}.jpg`}
+          alt="product"
+          style={{ maxWidth: '100%', height: isMobile ? 150 : 200, objectFit: 'cover' }}
+        />
+        <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
+          Liên hệ
+        </MulishTypo>
+        <MulishTypo
+          sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 20, sm: 26 } }}
+        >
+          {`Biển hiệu ${i + 1}`}
+        </MulishTypo>
+        {isMobile ? undefined : (
+          <MulishTypo
+            sx={{
+              fontSize: { xs: 14, sm: 16 },
+              fontWeight: 400,
+              color: black['200'],
+            }}
+          >
+            {DEFAULT_PRODUCT_DESCRIPTION}
+          </MulishTypo>
+        )}
+      </Stack>,
+    );
+  }
+
+  const handleViewAll = async () => {
+    setIsViewAll(!isViewAll);
+  };
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      if (boxHeightCounter === boxHeight) {
+        clearInterval(timer);
+        return;
+      }
+      setBoxHeightCounter((prev) => prev + 10);
+    }, 1000 / boxHeight);
+
+    return () => clearInterval(timer);
+  }, [boxHeightCounter]);
   return (
-    <Box sx={{ position: 'relative', height: { xs: 2100, sm: 400 }, width: '100%' }}>
+    <Box
+      className="hot-product"
+      sx={{
+        position: 'relative',
+        height: isViewAll ? { xs: 2000, sm: 800 } : { xs: 1700, sm: 400 },
+        width: '100%',
+        transition: 'height 1s',
+      }}
+    >
       <Box
         sx={{
           position: 'absolute',
@@ -46,6 +148,7 @@ export const HotProduct = () => {
         }}
       >
         <Container sx={{ backgroundColor: 'white' }}>
+          {/* 3 top product */}
           <Grid container spacing={5} sx={{ px: { xs: 0, sm: 2 } }}>
             <GridCenterVertical item xs={12} sm={3}>
               <Stack spacing={2}>
@@ -117,6 +220,52 @@ export const HotProduct = () => {
               </Grid>
             ))}
           </Grid>
+
+          {/* View all */}
+          <Box>
+            <Box sx={{ ...centerDiv, mt: 6 }}>
+              <RedContainedBtn
+                sx={{ padding: '18px 35px', width: 200 }}
+                onClick={handleViewAll}
+              >
+                <LatoTypo
+                  sx={{
+                    textTransform: 'uppercase',
+                    fontSize: { xs: 13, sm: 14 },
+                    letterSpacing: '3px',
+                  }}
+                >
+                  Xem tất cả
+                </LatoTypo>
+              </RedContainedBtn>
+            </Box>
+
+            {/* Menu */}
+          </Box>
+
+          <Box
+            sx={{
+              height: isViewAll ? boxHeight : 0,
+              width: '100%',
+              opacity: isViewAll ? 1 : 0,
+              transition: 'all 1s',
+              marginTop: 4,
+            }}
+          >
+            <AliceCarousel
+              infinite
+              items={carouselItem}
+              responsive={{
+                0: {
+                  items: 2,
+                },
+                1024: {
+                  items: 4,
+                  itemsFit: 'contain',
+                },
+              }}
+            />
+          </Box>
         </Container>
       </Box>
     </Box>
