@@ -54,18 +54,21 @@ export const ProductItem = (props: { product: ProductType }) => {
           maxWidth: '100%',
           height: isMobile ? 120 : 200,
           objectFit: 'cover',
+          marginBottom: isMobile ? 4 : 0,
         }}
       />
       <Stack direction="row" justifyContent="space-between" alignItems="center">
         <LinkCustom href={product.price ? '' : ZALO_LINK} target="_blank">
-          <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
+          <MulishTypo
+            sx={{ fontSize: { xs: 13, sm: 16 }, color: red['300'], fontWeight: 400 }}
+          >
             {product.price || 'Liên hệ'}
           </MulishTypo>
         </LinkCustom>
 
         {typeof product.image === 'object' ? (
           <>
-            <IconButton onClick={handleClick}>
+            <IconButton onClick={handleClick} sx={{ paddingY: '0px !important' }}>
               <MulishTypo
                 fontSize={{ xs: 13, sm: 14 }}
                 sx={{ color: black['900'], fontWeight: 500 }}
@@ -121,7 +124,7 @@ export const ProductItem = (props: { product: ProductType }) => {
             color: black['200'],
           }}
         >
-          {product.description || DEFAULT_PRODUCT_DESCRIPTION}
+          {product.description || ''}
         </MulishTypo>
       )}
     </Stack>

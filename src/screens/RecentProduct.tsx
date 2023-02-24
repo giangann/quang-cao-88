@@ -63,7 +63,7 @@ export const RecentProduct = () => {
         mb={3}
         textAlign="center"
         alignItems="center"
-        title="Danh sách các mẫu"
+        title="Các Mẫu Ledneon"
         subTitle="Sản phẩm"
         description="Danh sách các mẫu được nhiều khách hàng ưa chuộng"
       />

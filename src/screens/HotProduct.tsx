@@ -10,12 +10,14 @@ import {
   DEFAULT_PRODUCT_DESCRIPTION,
   REAL_PRODUCT_FOLDER_PATH,
   red,
+  ZALO_LINK,
 } from '../constants';
 import {
   BlackOutlinedBtn,
   centerDiv,
   GridCenterVertical,
   LatoTypo,
+  LinkCustom,
   MulishTypo,
   RedContainedBtn,
   WhiteOutlinedBtn,
@@ -54,56 +56,113 @@ export const HotProduct = () => {
 
   const hotProducts = [
     {
-      name: 'Bán quần áo',
+      name: 'Hân Hân Store',
       image: `${REAL_PRODUCT_FOLDER_PATH}/product21.jpg`,
-      description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-      price: '10.500.000 VND',
+      description:
+        'Bảng hiệu Alu - Chữ nổi Mica cho cửa hàng quần áo, đồ lưu niệm Hân Hân Store',
+      price: 'Liên hệ',
     },
     {
-      name: 'Quán ăn',
+      name: 'KofiKai Coffe',
       image: `${REAL_PRODUCT_FOLDER_PATH}/product2.jpg`,
-      description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-      price: '15.530.000 VND',
+      description: 'Bảng hiệu Logo - Chữ nổi mica cho quán coffe thuộc hệ thống Kofi Kai',
+      price: 'Liên hệ',
     },
     {
-      name: 'Rạp chiếu phim',
+      name: 'Quán Cà Phê Tươi',
       image: `${REAL_PRODUCT_FOLDER_PATH}/product3.jpg`,
-      description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-      price: '9.567.000 VND',
+      description: 'Bảng hiệu nền tôn (Tole) - Chữ nổi mica cho quán Cà Phê Tươi',
+      price: 'Liên hệ',
     },
   ];
 
-  const carouselItem = [];
-  for (let i = 0; i < 23; i++) {
-    carouselItem.push(
-      <Stack spacing={1} px={2}>
-        <img
-          src={`${REAL_PRODUCT_FOLDER_PATH}/product${i + 1}.jpg`}
-          alt="product"
-          style={{ maxWidth: '100%', height: isMobile ? 150 : 200, objectFit: 'cover' }}
-        />
-        <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
-          Liên hệ
-        </MulishTypo>
+  const realProducts = [
+    {
+      image: `product14`,
+      name: 'Thú cưng PetWants',
+    },
+    {
+      image: `product2`,
+      name: 'Coffe Kofi Kai',
+    },
+    {
+      image: `product3`,
+      name: 'Cà phê tươi',
+    },
+    {
+      image: `product4`,
+      name: 'Hân Hân Store',
+    },
+    {
+      image: `product8`,
+      name: 'Thẩm mỹ viện',
+    },
+    {
+      image: `product9`,
+      name: 'Quán Cơm Tấm',
+    },
+    {
+      image: `product11`,
+      name: 'Nha khoa Đại Nam',
+    },
+    {
+      image: `product12`,
+      name: 'MAIKA Beauty Center',
+    },
+    {
+      image: `product13`,
+      name: 'Trung tâm Sáng Tạo Việt',
+    },
+    {
+      image: `product15`,
+      name: 'Thẩm mỹ KaiSpa',
+    },
+    {
+      image: `product17`,
+      name: 'Thẩm mỹ ANNA',
+    },
+    {
+      image: `product18`,
+      name: 'Phòng khám Minh Phúc',
+    },
+    {
+      image: `product19`,
+      name: 'Green Beauty',
+    },
+    {
+      image: `product20`,
+      name: 'Hoàng Gia SG',
+    },
+  ];
+
+  const carouselItem = realProducts.map((product, index) => (
+    <Stack spacing={1} px={2} key={index}>
+      <img
+        src={`${REAL_PRODUCT_FOLDER_PATH}/${product.image}.jpg`}
+        alt="product"
+        style={{ maxWidth: '100%', height: isMobile ? 150 : 200, objectFit: 'cover' }}
+      />
+      <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
+        Liên hệ
+      </MulishTypo>
+      <MulishTypo
+        sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 20, sm: 26 } }}
+      >
+        {product.name}
+      </MulishTypo>
+      {/* {isMobile ? undefined : (
         <MulishTypo
-          sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 20, sm: 26 } }}
+          sx={{
+            fontSize: { xs: 14, sm: 16 },
+            fontWeight: 400,
+            color: black['200'],
+          }}
         >
-          {`Biển hiệu ${i + 1}`}
+          {DEFAULT_PRODUCT_DESCRIPTION}
         </MulishTypo>
-        {isMobile ? undefined : (
-          <MulishTypo
-            sx={{
-              fontSize: { xs: 14, sm: 16 },
-              fontWeight: 400,
-              color: black['200'],
-            }}
-          >
-            {DEFAULT_PRODUCT_DESCRIPTION}
-          </MulishTypo>
-        )}
-      </Stack>,
-    );
-  }
+      )} */}
+    </Stack>
+  ));
 
   const handleViewAll = async () => {
     setIsViewAll(!isViewAll);
@@ -162,8 +221,8 @@ export const HotProduct = () => {
                     color: black['200'],
                   }}
                 >
-                  Suspendisse in magna in elit hendrerit condimen. Phasellus eu justo mi.
-                  Proin aliquet.
+                  Danh sách các mẫu nổi bật của Quảng Cáo 88 và hình ảnh kết quả sau quá
+                  trình thi công thực tế
                 </MulishTypo>
                 <BlackOutlinedBtn sx={{ padding: '18px 35px', width: 200 }}>
                   <LatoTypo
@@ -183,9 +242,11 @@ export const HotProduct = () => {
               <Grid key={index} item xs={12} sm={3}>
                 <Stack spacing={1}>
                   <img src={product.image} alt="product" style={{ maxWidth: '100%' }} />
-                  <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
-                    {product.price}
-                  </MulishTypo>
+                  <LinkCustom href={ZALO_LINK} target="_blank">
+                    <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
+                      {product.price}
+                    </MulishTypo>
+                  </LinkCustom>
                   <LatoTypo sx={{ color: black['900'], fontWeight: 600, fontSize: 26 }}>
                     {product.name}
                   </LatoTypo>

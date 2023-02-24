@@ -17,6 +17,8 @@ export const Reason = () => {
   // Chính sách bảo hành
   // Chất lượng đảm bảo
 
+  // QUẢNG CÁO 88 là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh.
+
   const reason = [
     {
       icon: <MdiLightFactory fontSize={56} color={red['300']} />,
@@ -64,12 +66,12 @@ export const Reason = () => {
               borderBottom={{ sm: 'none !important' }}
               icon={<MdiLightFactory fontSize={56} color={red['300']} />}
               title="Tư vấn, thiết kế miễn phí"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description="Hỗ trợ khách hàng tận tình trong giai đoạn lựa chọn, thiết kế mẫu quảng cáo phù hợp."
             />
             <CardWithIconAndDescription
               icon={<MdiLightFactory fontSize={56} color={red['300']} />}
               title="Đội thi công chuyên nghiệp"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description="Bám sát thiết kế và đảm bảo chất lượng cùng sự an toàn."
             />
           </Box>
         </GridCenterVertical>
@@ -82,18 +84,18 @@ export const Reason = () => {
             justifyContent="center"
             title="Lý do chọn chúng tôi"
             subTitle="Biển hiệu quảng cáo"
-            description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa ligula eget."
+            description="QUẢNG CÁO 88 là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh."
           />
           <CardWithIconAndDescription
             mb={5}
             icon={<MdiLightFactory fontSize={56} color={red['300']} />}
             title="Đa dạng mẫu mã"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            description="Tạo nhiều sự lựa chọn để phục vụ tốt hơn cho nhu cầu từng khách hàng."
           />
           <CardWithIconAndDescription
             icon={<MdiLightFactory fontSize={56} color={red['300']} />}
             title="Chính sách bảo hành"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            description="Đồng hành cùng khách hàng ở giai đoạn sau thi công và đi vào sử dụng."
           />
         </Grid>
         <GridCenterVertical item xs={12} sm={4} order={3}>
@@ -103,12 +105,12 @@ export const Reason = () => {
               borderBottom={{ sm: 'none !important' }}
               icon={<MdiLightFactory fontSize={56} color={red['300']} />}
               title="Chất lượng đảm bảo"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              description=" Luôn đặt chất lượng lên hàng đầu nhằm đem lại giá trị tối ưu cho khách hàng"
             />
             <CardWithIconAndDescription
               icon={<MdiLightFactory fontSize={56} color={red['300']} />}
-              title="Đội thi công chuyên nghiệp"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              title="Hỗ trợ khách hàng tối ưu"
+              description="Cam kết hỗ trợ tốt nhất trong khả năng của mình."
             />
           </Box>
         </GridCenterVertical>
