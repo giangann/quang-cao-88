@@ -227,7 +227,7 @@ export const HotProduct = () => {
 
           <Box
             sx={{
-              height: isViewAll ? boxHeight : 0,
+              height: isViewAll ? { xs: 250, sm: 300 } : 0,
               width: '100%',
               opacity: isViewAll ? 1 : 0,
               transition: 'all 1s',
