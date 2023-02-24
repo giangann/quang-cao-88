@@ -8,6 +8,10 @@
   src: url('/fonts/UVNHaiBaTrung.TTF');
 }
 
+.uvn-haibatrung-font {
+  font-family: UVNHaiBaTrung !important;
+}
+
 .bay-view-font {
   font-family: BayView !important;
 }

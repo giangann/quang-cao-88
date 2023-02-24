@@ -28,7 +28,7 @@ export const Header = () => {
       link: '/home',
     },
     {
-      name: 'Sản phẩm nổi bật',
+      name: 'Dịch vụ nổi bật',
       link: '/hot-product',
     },
     {
