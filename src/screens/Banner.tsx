@@ -77,8 +77,8 @@ export const Banner = () => {
                 fontSize: { xs: 40, sm: 80 },
                 lineHeight: '1.2em',
                 textTransform: 'uppercase',
-                wordSpacing:2,
-                letterSpacing:4
+                wordSpacing: 2,
+                letterSpacing: 4,
               }}
             >
               Quảng cáo 88

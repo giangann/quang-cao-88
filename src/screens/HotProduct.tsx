@@ -52,8 +52,6 @@ export const HotProduct = () => {
 
   const [isViewAll, setIsViewAll] = useState(false);
 
-  const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
-
   const hotProducts = [
     {
       name: 'Bán quần áo',
