@@ -67,7 +67,7 @@ export const RecentProduct = () => {
         subTitle="Sản phẩm"
         description="Danh sách các mẫu được nhiều khách hàng ưa chuộng"
       />
-      <Grid container spacing={2}>
+      <Grid container columnSpacing={2} rowSpacing={4}>
         {recentProduct.map((product, index) => (
           <Grid item xs={6} sm={3} key={index}>
             <ProductItem product={{ image: product.imageSuffix, name: product.name }} />

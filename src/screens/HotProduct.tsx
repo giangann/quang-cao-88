@@ -146,7 +146,7 @@ export const HotProduct = () => {
         Liên hệ
       </MulishTypo>
       <MulishTypo
-        sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 20, sm: 26 } }}
+        sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 16, sm: 20 } }}
       >
         {product.name}
       </MulishTypo>
@@ -218,7 +218,7 @@ export const HotProduct = () => {
                   sx={{
                     fontSize: { xs: 14, sm: 16 },
                     fontWeight: 400,
-                    color: black['200'],
+                    color: black['500'],
                   }}
                 >
                   Danh sách các mẫu nổi bật của Quảng Cáo 88 và hình ảnh kết quả sau quá
@@ -247,14 +247,20 @@ export const HotProduct = () => {
                       {product.price}
                     </MulishTypo>
                   </LinkCustom>
-                  <LatoTypo sx={{ color: black['900'], fontWeight: 600, fontSize: 26 }}>
+                  <LatoTypo
+                    sx={{
+                      color: black['900'],
+                      fontWeight: 600,
+                      fontSize: { xs: 16, sm: 20 },
+                    }}
+                  >
                     {product.name}
                   </LatoTypo>
                   <MulishTypo
                     sx={{
                       fontSize: { xs: 14, sm: 16 },
                       fontWeight: 400,
-                      color: black['200'],
+                      color: black['500'],
                     }}
                   >
                     {product.description}

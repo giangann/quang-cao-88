@@ -79,7 +79,7 @@ const LatoFontCardAction = styled(Typography)(({ theme }) => ({
 export const MulishFontCardDescription = styled(Typography)(({ theme }) => ({
   fontFamily: 'Mulish',
   fontSize: 16,
-  color: black['200'],
+  color: black['500'],
   fontWeight: 400,
   [theme.breakpoints.down('sm')]: {},
 }));

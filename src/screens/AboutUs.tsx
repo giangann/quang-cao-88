@@ -29,7 +29,7 @@ import {
   BoxWithTileSubtitleDescription,
   MulishFontCardDescription,
 } from '../components';
-import { black, grey, white } from '../constants';
+import { black, grey, red, white } from '../constants';
 const desc =
   'Một biển hiệu quảng cáo hiệu quả giúp truyền tải thông tin, hình ảnh, slogan hay hình ảnh sản phẩm của công ty tốt hơn rất nhiều so với những mảng quảng cáo khác. Giúp tiếp cận được một lượng lớn khách hàng tiềm năng, những người có khi chỉ nhìn thấy hình ảnh quảng cáo của bạn; đã cảm thấy ấn tượng và họ tìm mua';
 const about =
@@ -45,7 +45,11 @@ export const AboutUs = () => {
       description: 'Bạn muốn thiết kế bảng hiệu cho cơ sở kinh doanh?',
       icon: (
         <MdiClockEditOutline
-          style={{ transform: isMobile ? 'scale(1.5)' : 'scale(2)', opacity: 0.5 }}
+          style={{
+            color: red['300'],
+            transform: isMobile ? 'scale(1.5)' : 'scale(2)',
+            opacity: 0.8,
+          }}
         />
       ),
     },
@@ -56,8 +60,9 @@ export const AboutUs = () => {
       icon: (
         <FluentScanThumbUp20Regular
           style={{
+            color: red['300'],
             transform: isMobile ? 'scale(1.5)' : 'scale(2.2)',
-            opacity: 0.5,
+            opacity: 0.8,
           }}
         />
       ),
@@ -70,8 +75,9 @@ export const AboutUs = () => {
       icon: (
         <MdiHeadLightbulbOutline
           style={{
+            color: red['300'],
             transform: isMobile ? 'scale(1.5)' : 'scale(2)',
-            opacity: 0.5,
+            opacity: 0.8,
           }}
         />
       ),
@@ -123,7 +129,7 @@ export const AboutUs = () => {
 const MulishFontIntroTitle = styled(Typography)(({ theme }) => ({
   fontFamily: 'Mulish',
   fontSize: 19,
-  color: black['200'],
+  color: black['500'],
   fontWeight: 900,
   [theme.breakpoints.down('sm')]: {},
 }));

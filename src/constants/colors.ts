@@ -5,6 +5,7 @@ export const red = {
 // #8c8e90
 export const black = {
   900: '#2c2c2c',
+  500: '#505050',
   200: '#8c8e90',
   100: '#e5e5e5',
 };
