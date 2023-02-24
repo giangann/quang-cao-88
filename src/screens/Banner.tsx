@@ -3,7 +3,12 @@ import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
-import { LatoTypo, MulishTypoHeadingTitle, WhiteOutlinedBtn } from '../styled';
+import {
+  LatoTypo,
+  MulishTypoHeadingTitle,
+  UVNHaiBaTrungTypo,
+  WhiteOutlinedBtn,
+} from '../styled';
 
 export const Banner = () => {
   const theme = useTheme();
@@ -38,8 +43,8 @@ export const Banner = () => {
               : {
                   position: 'absolute',
                   opacity: 0.3,
-                  top: { xs: 300, sm: 200 },
-                  right: { xs: 0, sm: 200 },
+                  top: 0,
+                  right: 0,
                 }
           }
         >
@@ -66,17 +71,19 @@ export const Banner = () => {
             >
               Thiết kế, thi công bảng hiệu quảng cáo chuyên nghiệp tại Hồ Chí Minh
             </LatoTypo>
-            <MulishTypoHeadingTitle
+            <UVNHaiBaTrungTypo
               sx={{
                 color: 'white',
-                fontSize: { xs: 40, sm: 60 },
-                // fontWeight: 600,
+                fontSize: { xs: 40, sm: 80 },
                 lineHeight: '1.2em',
                 textTransform: 'uppercase',
+                wordSpacing:2,
+                letterSpacing:4
               }}
             >
               Quảng cáo 88
-            </MulishTypoHeadingTitle>
+            </UVNHaiBaTrungTypo>
+
             <Box>
               <Typed
                 style={{

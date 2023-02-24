@@ -16,7 +16,7 @@ export const Home = () => {
   const parallaxImgPath = '/logo.jpg';
 
   return (
-    <Box sx={{backgroundColor:grey['500']}}>
+    <Box sx={{ backgroundColor: grey['500'] }}>
       <Header />
       <Banner />
       <HotProduct />

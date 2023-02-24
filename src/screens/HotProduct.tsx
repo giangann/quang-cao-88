@@ -50,14 +50,6 @@ export const HotProduct = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-  console.log('is Mobile', isMobile);
-  const boxHeight = isMobile ? 250 : 300;
-
-  const initialHeight = isMobile ? 1200 : 400;
-  console.log('initialHeight', initialHeight);
-  const [height, setHeight] = useState(initialHeight);
-
-  const [boxHeightCounter, setBoxHeightCounter] = useState(0);
   const [isViewAll, setIsViewAll] = useState(false);
 
   const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -119,17 +111,6 @@ export const HotProduct = () => {
     setIsViewAll(!isViewAll);
   };
 
-  React.useEffect(() => {
-    const timer = setInterval(() => {
-      if (boxHeightCounter === boxHeight) {
-        clearInterval(timer);
-        return;
-      }
-      setBoxHeightCounter((prev) => prev + 10);
-    }, 1000 / boxHeight);
-
-    return () => clearInterval(timer);
-  }, [boxHeightCounter]);
   return (
     <Box
       className="hot-product"

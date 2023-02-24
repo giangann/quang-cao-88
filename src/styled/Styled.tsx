@@ -9,6 +9,9 @@ export const LayerBox = styled(Box)({
   width: '100%',
   height: '100%',
 });
+export const UVNHaiBaTrungTypo = styled(Typography)({
+  fontFamily: 'UVNHaiBaTrung',
+});
 
 export const LatoTypo = styled(Typography)({
   fontFamily: 'Lato',
