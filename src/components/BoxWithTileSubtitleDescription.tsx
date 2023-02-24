@@ -29,7 +29,7 @@ export const BoxWithTileSubtitleDescription = (
         <MulishTypo
           {...stackProps}
           sx={{
-            fontSize: { xs: 32, sm: 40 },
+            fontSize: { xs: 36, sm: 48 },
             fontWeight: 900,
             lineHeight: '1.2em',
             letterSpacing: 0,

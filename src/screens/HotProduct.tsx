@@ -146,7 +146,7 @@ export const HotProduct = () => {
         Liên hệ
       </MulishTypo>
       <MulishTypo
-        sx={{ color: black['900'], fontWeight: 700, fontSize: { xs: 16, sm: 20 } }}
+        sx={{ color: black['900'], fontWeight: 500, fontSize: { xs: 16, sm: 20 } }}
       >
         {product.name}
       </MulishTypo>
@@ -205,7 +205,7 @@ export const HotProduct = () => {
                 </LatoTypo>
                 <MulishTypo
                   sx={{
-                    fontSize: { xs: 32, sm: 40 },
+                    fontSize: { xs: 36, sm: 48 },
                     fontWeight: 900,
                     lineHeight: '1.2em',
                     letterSpacing: 0,
@@ -249,9 +249,9 @@ export const HotProduct = () => {
                   </LinkCustom>
                   <LatoTypo
                     sx={{
-                      color: black['900'],
+                      color: black['500'],
                       fontWeight: 600,
-                      fontSize: { xs: 16, sm: 20 },
+                      fontSize: { xs: 15, sm: 18 },
                     }}
                   >
                     {product.name}

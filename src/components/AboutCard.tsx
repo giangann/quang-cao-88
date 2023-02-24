@@ -8,6 +8,7 @@ import {
   useTheme,
 } from '@mui/material';
 
+import '../styled/button.css';
 import { black, red, ZALO_LINK } from '../constants';
 import { LinkCustom } from '../styled';
 
@@ -47,9 +48,15 @@ export const AboutCard = (props: AboutCardProps) => {
       <MulishFontCardDescription sx={{ marginY: { xs: 2, sm: 3 } }}>
         {description}
       </MulishFontCardDescription>
-      <LinkCustom href={ZALO_LINK} target="_blank">
+      {/* <LinkCustom href={ZALO_LINK} target="_blank">
         <LatoFontCardAction>Tư vấn ngay</LatoFontCardAction>
-      </LinkCustom>
+      </LinkCustom> */}
+
+      <div className="box-3">
+        <div className="btn btn-three">
+          <MulishFontCardAction>Tư vấn ngay</MulishFontCardAction>
+        </div>
+      </div>
     </Box>
   );
 };
@@ -64,12 +71,12 @@ const MulishFontCardTitle = styled(Typography)(({ theme }) => ({
   },
 }));
 
-const LatoFontCardAction = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Lato',
+const MulishFontCardAction = styled(Typography)(({ theme }) => ({
+  fontFamily: 'Mulish',
   fontSize: 14,
-  color: red['300'],
-  letterSpacing: '3px',
-  fontWeight: 500,
+  color: black['900'],
+  letterSpacing: '2px',
+  fontWeight: 900,
   textTransform: 'uppercase',
   [theme.breakpoints.down('sm')]: {
     fontSize: 13,

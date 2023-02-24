@@ -112,7 +112,7 @@ export const ProductItem = (props: { product: ProductType }) => {
         ) : undefined}
       </Stack>
       <LatoTypo
-        sx={{ color: black['900'], fontWeight: 600, fontSize: { xs: 16, sm: 20 } }}
+        sx={{ color: black['900'], fontWeight: 500, fontSize: { xs: 16, sm: 20 } }}
       >
         {product.name}
       </LatoTypo>
