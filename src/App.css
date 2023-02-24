@@ -85,10 +85,16 @@
     0 0 25px #24b7de, 0 0 30px #24b7de, 0 0 35px #24b7de, 0 0 40px #24b7de,
     2px 4px 3px rgba(0, 0, 0, 0.3);
 }
-.shadow-deep-blue {
+/* .shadow-deep-blue {
   text-shadow: 0 0 1px #0274fc, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #0274fc,
     0 0 25px #0274fc, 0 0 30px #0274fc, 0 0 35px #0274fc, 0 0 40px #0274fc,
     2px 4px 3px rgba(0, 0, 0, 0.3);
+} */
+
+.shadow-deep-blue {
+  text-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px,
+    rgb(2 116 252) 0px 0px 20px, rgb(2 116 252) 0px 0px 30px, rgb(2 116 252) 0px 0px 40px,
+    rgb(2 116 252) 0px 0px 55px, rgb(2 116 252) 0px 0px 75px;
 }
 .shadow-cotton-candy {
   text-shadow: 0 0 1px #eaa4ff, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #eaa4ff,
