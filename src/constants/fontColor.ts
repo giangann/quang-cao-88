@@ -8,6 +8,15 @@ export const listFontColor = [
   'white ',
   'blue ',
   'mint ',
+  'warm-white ',
+  'lemon-yellow ',
+  'deep-green ',
+  'ice-blue ',
+  'tropical-blue ',
+  'deep-blue ',
+  'cotton-candy ',
+  'deep-pink ',
+  'light-red ',
 ];
 
 export const listColorAndColorName = [
@@ -45,7 +54,7 @@ export const listColorAndColorName = [
   },
   {
     name: 'Ngọc',
-    slug: 'mint',
+    slug: 'tropical-blue',
   },
 ];
 
