@@ -1,3 +1,5 @@
+import '../styled/button.css';
+
 import {
   Box,
   BoxProps,
@@ -8,7 +10,6 @@ import {
   useTheme,
 } from '@mui/material';
 
-import '../styled/button.css';
 import { black, red, ZALO_LINK } from '../constants';
 import { LinkCustom } from '../styled';
 

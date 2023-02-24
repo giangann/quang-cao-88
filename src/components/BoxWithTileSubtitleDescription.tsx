@@ -43,7 +43,7 @@ export const BoxWithTileSubtitleDescription = (
           sx={{
             fontSize: { xs: 14, sm: 16 },
             fontWeight: 400,
-            color: black['200'],
+            color: black['500'],
           }}
         >
           {description}

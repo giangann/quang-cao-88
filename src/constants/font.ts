@@ -1,8 +1,6 @@
 export const listFont = [
   'Clip',
   'Bellview',
-  'Chicago',
-  'Codystar',
   'Cotton',
   'Daisy',
   'Garden',

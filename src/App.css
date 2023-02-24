@@ -1,19 +1,10 @@
 @font-face {
-  font-family: Bayview;
-  src: url('fonts/Bayview.ttf');
-}
-
-@font-face {
   font-family: UVNHaiBaTrung;
   src: url('/fonts/UVNHaiBaTrung.TTF');
 }
 
 .uvn-haibatrung-font {
   font-family: UVNHaiBaTrung !important;
-}
-
-.bay-view-font {
-  font-family: BayView !important;
 }
 
 .tableWrap::-webkit-scrollbar {
