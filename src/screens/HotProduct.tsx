@@ -183,7 +183,7 @@ export const HotProduct = () => {
                   Danh sách các mẫu nổi bật của Quảng Cáo 88 và hình ảnh kết quả sau quá
                   trình thi công thực tế
                 </MulishTypo>
-                <BlackOutlinedBtn
+                <RedContainedBtn
                   onClick={() => window.open(ZALO_LINK, '_blank')}
                   sx={{ padding: '18px 35px', width: 200 }}
                 >
@@ -192,11 +192,12 @@ export const HotProduct = () => {
                       textTransform: 'uppercase',
                       fontSize: { xs: 13, sm: 14 },
                       letterSpacing: '3px',
+                      fontWeight:700
                     }}
                   >
                     Đặt mẫu
                   </LatoTypo>
-                </BlackOutlinedBtn>
+                </RedContainedBtn>
               </Stack>
             </GridCenterVertical>
 
@@ -235,7 +236,7 @@ export const HotProduct = () => {
           {/* View all */}
           <Box>
             <Box sx={{ ...centerDiv, mt: 6 }}>
-              <RedContainedBtn
+              <BlackOutlinedBtn
                 sx={{ padding: '18px 35px', width: 200 }}
                 onClick={handleViewAll}
               >
@@ -248,7 +249,7 @@ export const HotProduct = () => {
                 >
                   Xem tất cả
                 </LatoTypo>
-              </RedContainedBtn>
+              </BlackOutlinedBtn>
             </Box>
 
             {/* Menu */}
