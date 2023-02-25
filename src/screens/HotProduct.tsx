@@ -224,7 +224,10 @@ export const HotProduct = () => {
                   Danh sách các mẫu nổi bật của Quảng Cáo 88 và hình ảnh kết quả sau quá
                   trình thi công thực tế
                 </MulishTypo>
-                <BlackOutlinedBtn sx={{ padding: '18px 35px', width: 200 }}>
+                <BlackOutlinedBtn
+                  onClick={() => window.open(ZALO_LINK, '_blank')}
+                  sx={{ padding: '18px 35px', width: 200 }}
+                >
                   <LatoTypo
                     sx={{
                       textTransform: 'uppercase',
