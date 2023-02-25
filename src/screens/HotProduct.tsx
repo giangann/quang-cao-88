@@ -192,7 +192,7 @@ export const HotProduct = () => {
                       textTransform: 'uppercase',
                       fontSize: { xs: 13, sm: 14 },
                       letterSpacing: '3px',
-                      fontWeight:700
+                      fontWeight: 700,
                     }}
                   >
                     Đặt mẫu
