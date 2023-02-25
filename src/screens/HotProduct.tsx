@@ -1,20 +1,11 @@
 import 'react-alice-carousel/lib/alice-carousel.css';
 import '../styled/carousel.css';
 
-import { Box, Container, Stack, useMediaQuery, useTheme } from '@mui/material';
-import { Grid } from '@mui/material';
-import { Carousel, ScrollingCarousel } from '@trendyol-js/react-carousel';
-import React, { useState } from 'react';
-import AliceCarousel from 'react-alice-carousel';
+import { Box, Container, Grid, Stack, useMediaQuery, useTheme } from '@mui/material';
+import { ScrollingCarousel } from '@trendyol-js/react-carousel';
+import { useState } from 'react';
 
-import { IcBaselineArrowBackIos, IcBaselineArrowForwardIos } from '../assets/icons';
-import {
-  black,
-  DEFAULT_PRODUCT_DESCRIPTION,
-  REAL_PRODUCT_FOLDER_PATH,
-  red,
-  ZALO_LINK,
-} from '../constants';
+import { black, REAL_PRODUCT_FOLDER_PATH, red, ZALO_LINK } from '../constants';
 import {
   BlackOutlinedBtn,
   centerDiv,
@@ -23,35 +14,9 @@ import {
   LinkCustom,
   MulishTypo,
   RedContainedBtn,
-  WhiteOutlinedBtn,
 } from '../styled';
-import { ProductItem } from './ProductItem';
 
 export const HotProduct = () => {
-  // const hotProducts = [
-  //   {
-  //     name: 'Bán quần áo',
-  //     image:
-  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/bryan-lobos-v6Y5j53HmCw-unsplash.jpg',
-  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-  //     price: '10.500.000 VND',
-  //   },
-  //   {
-  //     name: 'Quán ăn',
-  //     image:
-  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/matthew-smith-raeh5UIJixs-unsplash-800x1000.jpg',
-  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-  //     price: '15.530.000 VND',
-  //   },
-  //   {
-  //     name: 'Rạp chiếu phim',
-  //     image:
-  //       'https://templatekit.jegtheme.com/adsboard/wp-content/uploads/sites/222/2021/12/ryunosuke-kikuno-3UDme-mhd3Q-unsplash-800x1000.jpg',
-  //     description: 'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.',
-  //     price: '9.567.000 VND',
-  //   },
-  // ];
-
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const handleDragStart = (e: any) => e.preventDefault();
@@ -156,17 +121,6 @@ export const HotProduct = () => {
       >
         {product.name}
       </MulishTypo>
-      {/* {isMobile ? undefined : (
-        <MulishTypo
-          sx={{
-            fontSize: { xs: 14, sm: 16 },
-            fontWeight: 400,
-            color: black['200'],
-          }}
-        >
-          {DEFAULT_PRODUCT_DESCRIPTION}
-        </MulishTypo>
-      )} */}
     </Stack>
   ));
 
@@ -310,20 +264,6 @@ export const HotProduct = () => {
               marginTop: 4,
             }}
           >
-            {/* <AliceCarousel
-              infinite
-              mouseTracking
-              items={carouselItem}
-              responsive={{
-                0: {
-                  items: 2,
-                },
-                1024: {
-                  items: 4,
-                  itemsFit: 'contain',
-                },
-              }}
-            /> */}
             <ScrollingCarousel
               className="scrolling-carousel-example1"
               leftIcon={<button></button>}
