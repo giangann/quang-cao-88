@@ -14,7 +14,7 @@ import {
 export const Banner = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+  const isMedium = useMediaQuery(theme.breakpoints.between('md', 'lg'));
   const introduce = [
     'Bạn muốn thiết kế bảng hiệu cho cơ sở kinh doanh?',
     'Bạn muốn setup quán Cafe để khởi nghiệp?',
@@ -55,7 +55,15 @@ export const Banner = () => {
             alt="logo"
           />
         </Box>
-        <Container sx={isMobile ? { position: 'relative', top: -100 } : {}}>
+        <Container
+          sx={
+            isMobile
+              ? { position: 'relative', top: -100 }
+              : isMedium
+              ? { position: 'relative', top: -100 }
+              : {}
+          }
+        >
           <Stack
             sx={isMobile ? { alignItems: 'center' } : {}}
             spacing={3}

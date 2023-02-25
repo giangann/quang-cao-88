@@ -236,7 +236,7 @@ export const HotProduct = () => {
           {/* View all */}
           <Box>
             <Box sx={{ ...centerDiv, mt: 6 }}>
-              <BlackOutlinedBtn
+              <RedContainedBtn
                 sx={{ padding: '18px 35px', width: 200 }}
                 onClick={handleViewAll}
               >
@@ -249,7 +249,7 @@ export const HotProduct = () => {
                 >
                   Xem tất cả
                 </LatoTypo>
-              </BlackOutlinedBtn>
+              </RedContainedBtn>
             </Box>
 
             {/* Menu */}
