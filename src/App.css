@@ -63,9 +63,9 @@
 
 .shadow-warm-white {
   text-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px,
-    rgb(255, 251, 125) 0px 0px 20px,rgb(255, 251, 125) 0px 0px 30px,
-   rgb(255, 251, 125) 0px 0px 40px,rgb(255, 251, 125) 0px 0px 55px,
-   rgb(255, 251, 125) 0px 0px 75px;
+    rgb(255, 251, 207) 0px 0px 20px, rgb(255, 251, 207) 0px 0px 30px,
+    rgb(255, 251, 207) 0px 0px 40px, rgb(255, 251, 207) 0px 0px 55px,
+    rgb(255, 251, 207) 0px 0px 75px;
 }
 
 /* .shadow-lemon-yellow {
