@@ -1,4 +1,3 @@
-import 'react-alice-carousel/lib/alice-carousel.css';
 import '../styled/carousel.css';
 
 import { Box, Container, Grid, Stack, useMediaQuery, useTheme } from '@mui/material';
