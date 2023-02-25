@@ -5,6 +5,7 @@ import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
 import {
   LatoTypo,
+  MulishTypo,
   MulishTypoHeadingTitle,
   UVNHaiBaTrungTypo,
   WhiteOutlinedBtn,
@@ -60,17 +61,17 @@ export const Banner = () => {
             spacing={3}
             mt={{ xs: 20, sm: 30 }}
           >
-            <LatoTypo
+            <MulishTypo
               sx={{
                 color: red['300'],
-                letterSpacing: '4px',
+                letterSpacing: '2px',
                 fontSize: { xs: 15, sm: 17 },
                 fontWeight: 400,
                 textAlign: { xs: 'center', sm: 'unset' },
               }}
             >
               Thiết kế, thi công bảng hiệu quảng cáo chuyên nghiệp tại Hồ Chí Minh
-            </LatoTypo>
+            </MulishTypo>
             <UVNHaiBaTrungTypo
               sx={{
                 color: 'white',
@@ -97,7 +98,7 @@ export const Banner = () => {
               />
             </Box>
 
-            <WhiteOutlinedBtn
+            {/* <WhiteOutlinedBtn
               sx={{ padding: '18px 35px', width: 200 }}
               onClick={() => window.open(ZALO_LINK, '_blank')}
             >
@@ -110,7 +111,31 @@ export const Banner = () => {
               >
                 Tư vấn ngay
               </LatoTypo>
-            </WhiteOutlinedBtn>
+            </WhiteOutlinedBtn> */}
+            <div
+              className="box-3"
+              onClick={() => {
+                window.open(ZALO_LINK);
+              }}
+              onKeyDown={() => {
+                window.open(ZALO_LINK);
+              }}
+              aria-hidden="true"
+            >
+              <div className="btn btn-three">
+                <MulishTypo
+                  sx={{
+                    textTransform: 'uppercase',
+                    fontSize: { xs: 13, sm: 14 },
+                    letterSpacing: '3px',
+                    color: 'white',
+                    fontWeight: 900,
+                  }}
+                >
+                  Tư vấn ngay
+                </MulishTypo>
+              </div>
+            </div>
           </Stack>
         </Container>
       </>

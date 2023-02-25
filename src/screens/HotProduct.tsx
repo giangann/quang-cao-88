@@ -1,10 +1,13 @@
 import 'react-alice-carousel/lib/alice-carousel.css';
+import '../styled/carousel.css';
 
 import { Box, Container, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { Grid } from '@mui/material';
+import { Carousel, ScrollingCarousel } from '@trendyol-js/react-carousel';
 import React, { useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 
+import { IcBaselineArrowBackIos, IcBaselineArrowForwardIos } from '../assets/icons';
 import {
   black,
   DEFAULT_PRODUCT_DESCRIPTION,
@@ -51,6 +54,7 @@ export const HotProduct = () => {
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const handleDragStart = (e: any) => e.preventDefault();
 
   const [isViewAll, setIsViewAll] = useState(false);
 
@@ -138,6 +142,8 @@ export const HotProduct = () => {
   const carouselItem = realProducts.map((product, index) => (
     <Stack spacing={1} px={2} key={index}>
       <img
+        onDragStart={handleDragStart}
+        role="presentation"
         src={`${REAL_PRODUCT_FOLDER_PATH}/${product.image}.jpg`}
         alt="product"
         style={{ maxWidth: '100%', height: isMobile ? 150 : 200, objectFit: 'cover' }}
@@ -170,7 +176,6 @@ export const HotProduct = () => {
 
   return (
     <Box
-      className="hot-product"
       sx={{
         position: 'relative',
         height: isViewAll ? { xs: 2000, sm: 800 } : { xs: 1700, sm: 400 },
@@ -185,6 +190,7 @@ export const HotProduct = () => {
           height: '500px',
           width: '100%',
         }}
+        id="hot-product-section"
       >
         <Container
           sx={{ backgroundColor: 'white', pb: { xs: 4, sm: isViewAll ? 12 : 0 } }}
@@ -193,16 +199,16 @@ export const HotProduct = () => {
           <Grid container spacing={5} sx={{ px: { xs: 0, sm: 2 } }}>
             <GridCenterVertical item xs={12} sm={3}>
               <Stack spacing={2}>
-                <LatoTypo
+                <MulishTypo
                   sx={{
                     color: red['300'],
-                    letterSpacing: '3px',
+                    letterSpacing: '2px',
                     fontSize: { xs: 15, sm: 17 },
                     fontWeight: 400,
                   }}
                 >
                   Biển hiệu quảng cáo
-                </LatoTypo>
+                </MulishTypo>
                 <MulishTypo
                   sx={{
                     fontSize: { xs: 36, sm: 48 },
@@ -304,8 +310,9 @@ export const HotProduct = () => {
               marginTop: 4,
             }}
           >
-            <AliceCarousel
+            {/* <AliceCarousel
               infinite
+              mouseTracking
               items={carouselItem}
               responsive={{
                 0: {
@@ -316,7 +323,40 @@ export const HotProduct = () => {
                   itemsFit: 'contain',
                 },
               }}
-            />
+            /> */}
+            <ScrollingCarousel
+              className="scrolling-carousel-example1"
+              leftIcon={<button></button>}
+              rightIcon={<button></button>}
+            >
+              {realProducts.map((product, index) => (
+                <Stack spacing={1} px={2} key={index}>
+                  <img
+                    onDragStart={handleDragStart}
+                    role="presentation"
+                    src={`${REAL_PRODUCT_FOLDER_PATH}/${product.image}.jpg`}
+                    alt="product"
+                    style={{
+                      maxWidth: '100%',
+                      height: isMobile ? 150 : 200,
+                      objectFit: 'cover',
+                    }}
+                  />
+                  <MulishTypo sx={{ fontSize: 16, color: red['300'], fontWeight: 400 }}>
+                    Liên hệ
+                  </MulishTypo>
+                  <MulishTypo
+                    sx={{
+                      color: black['900'],
+                      fontWeight: 500,
+                      fontSize: { xs: 16, sm: 20 },
+                    }}
+                  >
+                    {product.name}
+                  </MulishTypo>
+                </Stack>
+              ))}
+            </ScrollingCarousel>
           </Box>
         </Container>
       </Box>

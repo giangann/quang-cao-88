@@ -1,4 +1,4 @@
-import { Box, Drawer, DrawerProps, IconButton, MenuItem, Stack } from '@mui/material';
+import { Drawer, DrawerProps, Stack } from '@mui/material';
 import { useState } from 'react';
 
 import { black } from '../constants';
@@ -40,11 +40,14 @@ export const CustomDrawer = (props: CustomDrawerProps) => {
       <Stack sx={{ px: 2, py: 4 }} spacing={2}>
         {item.map((item, index) => (
           <Stack key={index} direction="row" spacing={1.5} alignItems="center">
-            <LinkCustom href={item.link}>
-              <MulishTypo color={black['900']} fontSize={15} fontWeight={500}>
-                {item.name}
-              </MulishTypo>
-            </LinkCustom>
+            <div onClick={onClose as any} aria-hidden="true" onKeyDown={onClose as any}>
+              <LinkCustom href={item.link}>
+                <MulishTypo color={black['900']} fontSize={15} fontWeight={500}>
+                  {item.name}
+                </MulishTypo>
+              </LinkCustom>
+            </div>
+
             {/* {item.children && (
               <>
                 <IconButton sx={{ p: 1 }} onClick={handleClick}>

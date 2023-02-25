@@ -49,11 +49,17 @@ export const AboutCard = (props: AboutCardProps) => {
       <MulishFontCardDescription sx={{ marginY: { xs: 2, sm: 3 } }}>
         {description}
       </MulishFontCardDescription>
-      {/* <LinkCustom href={ZALO_LINK} target="_blank">
-        <LatoFontCardAction>Tư vấn ngay</LatoFontCardAction>
-      </LinkCustom> */}
 
-      <div className="box-3">
+      <div
+        className="box-3"
+        onClick={() => {
+          window.open(ZALO_LINK);
+        }}
+        onKeyDown={() => {
+          window.open(ZALO_LINK);
+        }}
+        aria-hidden="true"
+      >
         <div className="btn btn-three">
           <MulishFontCardAction>Tư vấn ngay</MulishFontCardAction>
         </div>

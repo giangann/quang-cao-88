@@ -16,16 +16,16 @@ export const BoxWithTileSubtitleDescription = (
   return (
     <Box>
       <Stack spacing={2} {...stackProps}>
-        <LatoTypo
+        <MulishTypo
           sx={{
             color: red['300'],
-            letterSpacing: '3px',
+            letterSpacing: '2px',
             fontSize: { xs: 15, sm: 17 },
             fontWeight: 400,
           }}
         >
           {subTitle}
-        </LatoTypo>
+        </MulishTypo>
         <MulishTypo
           {...stackProps}
           sx={{

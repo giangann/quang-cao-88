@@ -55,16 +55,32 @@
     0 0 25px #65a4ed, 0 0 30px #65a4ed, 0 0 35px #65a4ed, 0 0 40px #65a4ed,
     2px 4px 3px rgba(0, 0, 0, 0.3);
 }
+/* .shadow-warm-white {
+  text-shadow: 0 0 1px #fffdcf, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fffdcf,
+    0 0 25px #fffdcf, 0 0 30px #fffdcf, 0 0 35px #fffdcf, 0 0 40px #fffdcf,
+    2px 4px 3px rgba(0, 0, 0, 0.3);
+} */
+
 .shadow-warm-white {
+  text-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px,
+    rgb(255 253 207) 0px 0px 20px, rgb(255 253 207) 0px 0px 30px,
+    rgb(255 253 207) 0px 0px 40px, rgb(255 253 207) 0px 0px 55px,
+    rgb(255 253 207) 0px 0px 75px;
+}
+
+/* .shadow-lemon-yellow {
   text-shadow: 0 0 1px #fffdcf, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fffdcf,
     0 0 25px #fffdcf, 0 0 30px #fffdcf, 0 0 35px #fffdcf, 0 0 40px #fffdcf,
     2px 4px 3px rgba(0, 0, 0, 0.3);
-}
+} */
+
 .shadow-lemon-yellow {
-  text-shadow: 0 0 1px #fffdcf, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #fffdcf,
-    0 0 25px #fffdcf, 0 0 30px #fffdcf, 0 0 35px #fffdcf, 0 0 40px #fffdcf,
-    2px 4px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: rgb(255 255 255) 0px 0px 5px, rgb(255 255 255) 0px 0px 10px,
+    rgb(255 249 124) 0px 0px 20px, rgb(255 249 124) 0px 0px 30px,
+    rgb(255 249 124) 0px 0px 40px, rgb(255 249 124) 0px 0px 55px,
+    rgb(255 249 124) 0px 0px 75px;
 }
+
 .shadow-mint {
   text-shadow: 0 0 1px #80ffd9, 0 0 10px #fff, 0 0 20px #fff, 0 0 20px #80ffd9,
     0 0 25px #80ffd9, 0 0 30px #80ffd9, 0 0 35px #80ffd9, 0 0 40px #80ffd9,
@@ -141,10 +157,24 @@
 .icon-deep-blue {
   color: #0274fc;
 }
+/*  */
+.icon-tropical-blue {
+  color: #24b7de;
+}
+.icon-lemon-yellow {
+  color: #fff97c;
+}
+.icon-warm-white {
+  color: #fffdcf;
+}
+
+.icon-warm-white {
+  color: #e2e0b6;
+}
+/*  */
 .icon-mint {
   color: #80ffd9;
 }
-
 /* font list */
 /*  */
 /*  */

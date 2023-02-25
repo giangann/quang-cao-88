@@ -84,7 +84,7 @@ export const AboutUs = () => {
     },
   ];
   return (
-    <Container sx={{ mt: { xs: 0, sm: 16 }, mb: 16 }}>
+    <Container sx={{ mt: { xs: 0, sm: 16 }, mb: 16 }} id="about-section">
       {/* title + intro block */}
       <Grid container mb={4}>
         <Grid item xs={12} sm={6}>

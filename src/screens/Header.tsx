@@ -15,7 +15,7 @@ import { useState } from 'react';
 
 import { CustomDrawer } from '../components';
 import { black, LOGO, red } from '../constants';
-import { MulishTypo, textHoverStyle } from '../styled';
+import { LinkCustom, MulishTypo, textHoverStyle } from '../styled';
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
@@ -24,20 +24,28 @@ export const Header = () => {
   const logoPath = LOGO;
   const pages = [
     {
-      name: 'Về chúng tôi',
-      link: '/home',
+      name: 'Dịch vụ nổi bật',
+      link: '#hot-product-section',
     },
     {
-      name: 'Dịch vụ nổi bật',
-      link: '/hot-product',
+      name: 'Mẫu Led Neon',
+      link: '#led-neon-section',
+    },
+    {
+      name: 'Tùy chọn mẫu',
+      link: '#custom-led-section',
+    },
+    {
+      name: 'Về chúng tôi',
+      link: '#about-section',
     },
     {
       name: 'Lý do',
-      link: '/reason',
+      link: '#reason-section',
     },
     {
       name: 'Liên hệ',
-      link: '/contact',
+      link: '#contact-section',
     },
   ];
   const handleCloseDrawer = () => {
@@ -59,17 +67,18 @@ export const Header = () => {
             </Box>
             <Stack direction="row" spacing={8}>
               {pages.map((page: any) => (
-                <MulishTypo
-                  key={page.name}
-                  sx={{
-                    fontSize: 18,
-                    color: black['900'],
-                    fontWeight: 700,
-                    ...textHoverStyle,
-                  }}
-                >
-                  {page.name}
-                </MulishTypo>
+                <LinkCustom key={page.name} href={page.link}>
+                  <MulishTypo
+                    sx={{
+                      fontSize: 18,
+                      color: black['900'],
+                      fontWeight: 700,
+                      ...textHoverStyle,
+                    }}
+                  >
+                    {page.name}
+                  </MulishTypo>
+                </LinkCustom>
               ))}
             </Stack>
           </Toolbar>
@@ -95,28 +104,6 @@ export const Header = () => {
                 <MenuIcon onClick={() => setOpenDrawer(true)} />
               </IconButton>
             </Box>
-            {/* <Typography
-              variant="h6"
-              noWrap
-              component="a"
-              href="/home"
-              sx={{
-                flexGrow: 1,
-                mr: 2,
-                fontSize: 24,
-                fontFamily: 'monospace',
-                fontWeight: 600,
-                letterSpacing: '.2rem',
-                color: 'black',
-                margin: 'auto',
-                width: 'fit-content !important',
-                textDecoration: 'none',
-                display: 'flex',
-                justifyContent: 'center',
-              }}
-            >
-              QuangCao88
-            </Typography> */}
             <Box sx={{ margin: 'auto', height: '100%' }}>
               <img src={logoPath} style={{ height: '100%', width: 'auto' }} alt="logo" />
             </Box>

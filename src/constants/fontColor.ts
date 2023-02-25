@@ -56,6 +56,14 @@ export const listColorAndColorName = [
     name: 'Ngọc',
     slug: 'tropical-blue',
   },
+  {
+    name: 'Vàng chanh',
+    slug: 'lemon-yellow',
+  },
+  {
+    name: 'Trắng ấm',
+    slug: 'warm-white',
+  },
 ];
 
 export const extraColor = [

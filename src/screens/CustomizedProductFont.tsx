@@ -6,7 +6,7 @@ import { FontTable } from './FontTable';
 
 export const CustomizedProductFont = () => {
   return (
-    <Container>
+    <Container id="custom-led-section">
       <BoxWithTileSubtitleDescription
         marginY={4}
         mt={12}

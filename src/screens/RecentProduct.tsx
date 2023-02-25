@@ -58,7 +58,7 @@ export const RecentProduct = () => {
   ];
 
   return (
-    <Container sx={{ mb: { xs: 8, sm: 16 } }} className="recent-product">
+    <Container sx={{ mb: { xs: 8, sm: 16 } }} id="led-neon-section">
       <BoxWithTileSubtitleDescription
         mb={3}
         textAlign="center"
