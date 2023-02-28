@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import { useAtomValue } from 'jotai';
 import Draggable from 'react-draggable';
+
 import { Carousel3dImage } from '../components';
 import { PREVIEW_BG_FOLDER_PATH } from '../constants';
 import { previewAtom } from '../libs/atoms';
@@ -20,7 +21,7 @@ export const FontPreviewImageBg = () => {
         position: 'relative',
       }}
     >
-      <LayerBox sx={{...centerDiv}}>
+      <LayerBox sx={{ ...centerDiv }}>
         <Draggable>
           <Box
             sx={{

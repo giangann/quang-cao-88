@@ -1,7 +1,8 @@
 import './carousel3d/carousel3d.css';
 
-import { PREVIEW_BG_FOLDER_PATH } from '../constants';
 import { useEffect } from 'react';
+
+import { PREVIEW_BG_FOLDER_PATH } from '../constants';
 
 export const Carousel3dImage = () => {
   const bgImageArr: string[] = [];
