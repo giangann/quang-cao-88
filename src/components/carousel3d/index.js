@@ -43,7 +43,6 @@ ground.style.width = radius * 3 + 'px';
 ground.style.height = radius * 3 + 'px';
 
 function init(delayTime) {
-  console.log('delay time');
   for (var i = 0; i < aEle.length; i++) {
     aEle[i].style.transform =
       'rotateY(' + i * (360 / aEle.length) + 'deg) translateZ(' + radius + 'px)';
@@ -112,14 +111,14 @@ if (autoRotate) {
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
 
-// add background music
-if (bgMusicURL) {
-  document.getElementById('music-container').innerHTML += `
-<audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>    
-<p>If you are reading this, it is because your browser does not support the audio element.</p>
-</audio>
-`;
-}
+// // add background music
+// if (bgMusicURL) {
+//   document.getElementById('music-container').innerHTML += `
+// <audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>    
+// <p>If you are reading this, it is because your browser does not support the audio element.</p>
+// </audio>
+// `;
+// }
 
 //
 
