@@ -1,13 +1,22 @@
 import './App.css';
 
-import React, { useState } from 'react';
+import { useEffect } from 'react';
 
-import logo from './logo.svg';
 import { Home } from './screens';
 
 function App() {
-  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const script = document.createElement('script');
 
+    script.src = './src/components/carousel3d/index.js';
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return <Home />;
 }
 

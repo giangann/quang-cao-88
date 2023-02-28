@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 
-import { BoxWithParallaxBgImage, ZaloFloatIcon } from '../components';
+import { BoxWithParallaxBgImage, Carousel3dImage, ZaloFloatIcon } from '../components';
 import { PhoneFloatIcon } from '../components/PhoneFloatIcon';
 import { black, grey } from '../constants';
 import { AboutUs } from './AboutUs';
@@ -22,6 +22,7 @@ export const Home = () => {
       <HotProduct />
       <RecentProduct />
       <CustomizedProductFont />
+      <Carousel3dImage />
       <AboutUs />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <Reason />
