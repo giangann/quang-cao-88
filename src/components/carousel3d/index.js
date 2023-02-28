@@ -5,12 +5,14 @@
 // Give me a coffee <3 https://github.com/HoangTran0410/HoangTran0410/blob/main/DONATE.md
 
 // You can change global variables here:
-var radius = 360; // how big of the radius
+var w = window.innerWidth;
+var radius = w <= 900 ? 150 : 360; // how big of the radius
 var autoRotate = false; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 100; // width of images (unit: px)
+var imgWidth = w <= 900 ? 50 : 100; // width of images (unit: px)
 var imgHeight = 120; // height of images (unit: px)
 
+console.log('width', imgWidth, w)
 // Link of background music - set 'null' if you dont want to play background music
 var bgMusicURL =
   'https://api.soundcloud.com/tracks/143041228/stream?client_id=587aa2d384f7333a886010d5f52f302a';
@@ -47,6 +49,7 @@ function init(delayTime) {
     aEle[i].style.transform =
       'rotateY(' + i * (360 / aEle.length) + 'deg) translateZ(' + radius + 'px)';
   }
+  setOpacity(0, 9);
 }
 
 function applyTranform(obj) {
