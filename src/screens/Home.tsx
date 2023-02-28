@@ -22,12 +22,10 @@ export const Home = () => {
       <HotProduct />
       <RecentProduct />
       <CustomizedProductFont />
-      <Carousel3dImage />
       <AboutUs />
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <Reason />
       <Contact />
-      {/* <BoxWithParallaxBgImage imgPath={parallaxImgPath} /> */}
       <ZaloFloatIcon />
       <PhoneFloatIcon />
     </Box>

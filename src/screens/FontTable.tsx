@@ -1,14 +1,12 @@
 import '../App.css';
 
-import { Box, Container, Tab, Tabs, Typography } from '@mui/material';
+import { Box, Tab, Tabs, Typography } from '@mui/material';
 import React from 'react';
 
-import { listFont } from '../constants';
 import { ChooseBackgroundPreview } from './ChooseBackgroundPreview';
 import { ChooseColor } from './ChooseColor';
 import { ChooseFont } from './ChooseFont';
 import { ChooseFontSize } from './ChooseFontSize';
-import { FontPreviewProps } from './FontPreview';
 import { TypeText } from './TypeText';
 
 interface TabPanelProps {

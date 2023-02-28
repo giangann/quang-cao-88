@@ -1,5 +1,7 @@
 import './carousel3d/carousel3d.css';
+
 import { PREVIEW_BG_FOLDER_PATH } from '../constants';
+import { useEffect } from 'react';
 
 export const Carousel3dImage = () => {
   const bgImageArr: string[] = [];
@@ -7,8 +9,20 @@ export const Carousel3dImage = () => {
     bgImageArr.push(`${PREVIEW_BG_FOLDER_PATH}/background${i > 9 ? i - 9 : i}.jpg`);
   }
 
+  useEffect(() => {
+    const script = document.createElement('script');
+
+    script.src = './src/components/carousel3d/index.js';
+    script.async = true;
+
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
-    <div style={{ position: 'relative', top: '-200px', left: '-200px' }}>
+    <div>
       <div id="drag-container">
         <div id="spin-container">
           {bgImageArr.map((image, index) => (
@@ -26,17 +40,6 @@ export const Carousel3dImage = () => {
         </div>
         <div id="ground"></div>
       </div>
-
-      <div
-        id="box-image-preview"
-        style={{
-          backgroundImage: `url(${bgImageArr[0]})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'contain',
-          transition: 'all 1s ease',
-        }}
-      />
     </div>
   );
 };
