@@ -5,11 +5,11 @@
 // Give me a coffee <3 https://github.com/HoangTran0410/HoangTran0410/blob/main/DONATE.md
 
 // You can change global variables here:
-var radius = 240; // how big of the radius
+var radius = 360; // how big of the radius
 var autoRotate = false; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = 120; // width of images (unit: px)
-var imgHeight = 170; // height of images (unit: px)
+var imgWidth = 100; // width of images (unit: px)
+var imgHeight = 120; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
 var bgMusicURL =
@@ -63,6 +63,35 @@ function applyTranform(obj) {
 function playSpin(yes) {
   console.log('play spin called');
   ospin.style.animationPlayState = yes ? 'running' : 'paused';
+}
+
+function setOpacity(activeIndex, numberOfHiddenItem) {
+  const halfNumOfHiddenItem = Math.floor(numberOfHiddenItem / 2);
+
+  // set all opacity is small
+  for (let i = 0; i < aEle.length; i++) {
+    aEle[i].style.opacity = 0.1;
+  }
+
+  // set opacity 1 for 1/2 nearest active image
+  for (
+    let i = activeIndex - halfNumOfHiddenItem;
+    i < activeIndex + halfNumOfHiddenItem;
+    i++
+  ) {
+    if (i < 0) {
+      aEle[aEle.length + i].style.opacity = 1;
+      continue;
+    }
+    if (i > aEle.length - 1) {
+      aEle[i - aEle.length].style.opacity = 1;
+      continue;
+    }
+    aEle[i].style.opacity = 1;
+  }
+
+  // set opacity <0.2 for 1/2 rest of image
+  // for (let i=active)
 }
 
 var sX,
@@ -137,6 +166,7 @@ document.onpointerdown = function (e) {
     let previewBg = document.getElementById('box-image-preview');
     previewBg.style.backgroundImage = `url(${aEle[targetIndex].src})`;
 
+    setOpacity(activeIndex, 9);
     return false;
   }
 

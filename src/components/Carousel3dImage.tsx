@@ -1,29 +1,33 @@
 import './carousel3d/carousel3d.css';
 
 import React, { useEffect, useState } from 'react';
+import { PREVIEW_BG_FOLDER_PATH } from '../constants';
 // import './carousel3d/index.js'
 
 export const Carousel3dImage = () => {
-  const initArrImage = [
-    'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-    'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-  ];
-  const [arrImage, setArrImage] = useState(initArrImage);
+  let bgImageArr: string[] = [];
+  for (let i = 1; i < 18; i++) {
+    bgImageArr.push(`${PREVIEW_BG_FOLDER_PATH}/background${i > 10 ? i - 10 : i}.jpg`);
+  }
+  // const initArrImage = [
+  //   'https://images.pexels.com/photos/206395/pexels-photo-206395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1391498/pexels-photo-1391498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1758144/pexels-photo-1758144.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1382734/pexels-photo-1382734.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/1462636/pexels-photo-1462636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  //   'https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  // ];
 
   return (
-    <div>
+    <div style={{position:'relative', top:'-200px', left:'-200px'}}>
       <div id="drag-container">
         <div id="spin-container">
           {/* <!-- Add your images (or video) here --> */}
-          {arrImage.map((image, index) => (
+          {bgImageArr.map((image, index) => (
             <img
               className="carousel-3d-image"
               src={image}
@@ -88,7 +92,7 @@ export const Carousel3dImage = () => {
       <div
         id="box-image-preview"
         style={{
-          backgroundImage: `url(${initArrImage[0]})`,
+          backgroundImage: `url(${bgImageArr[0]})`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           backgroundSize: 'contain',
