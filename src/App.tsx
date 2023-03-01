@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const script = document.createElement('script');
 
-    script.src = './src/components/carousel3d/index.js';
+    script.src = '/index.js';
     script.async = true;
 
     document.body.appendChild(script);
