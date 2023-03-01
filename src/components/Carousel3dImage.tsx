@@ -23,7 +23,7 @@ export const Carousel3dImage = () => {
     };
   }, []);
   return (
-    <div>
+    <div style={{ overflowX: 'hidden' }}>
       <div id="drag-container">
         <div id="spin-container">
           {bgImageArr.map((image, index) => (

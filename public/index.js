@@ -6,11 +6,11 @@
 
 // You can change global variables here:
 var w = window.innerWidth;
-var radius = w <= 900 ? 150 : 360; // how big of the radius
+var radius = w <= 900 ? 300 : 360; // how big of the radius
 var autoRotate = false; // auto rotate or not
 var rotateSpeed = -60; // unit: seconds/360 degrees
-var imgWidth = w <= 900 ? 50 : 100; // width of images (unit: px)
-var imgHeight = 120; // height of images (unit: px)
+var imgWidth = w <= 900 ? 100 : 100; // width of images (unit: px)
+var imgHeight = w <= 900 ? 120 : 120; // height of images (unit: px)
 
 // Link of background music - set 'null' if you dont want to play background music
 var bgMusicURL =
@@ -44,10 +44,18 @@ ground.style.width = radius * 3 + 'px';
 ground.style.height = radius * 3 + 'px';
 
 function init(delayTime) {
-  for (var i = 0; i < aEle.length; i++) {
-    aEle[i].style.transform =
-      'rotateY(' + i * (360 / aEle.length) + 'deg) translateZ(' + radius + 'px)';
+  if (w > 900) {
+    for (var i = 0; i < aEle.length; i++) {
+      aEle[i].style.transform =
+        'rotateY(' + i * (360 / aEle.length) + 'deg) translateZ(' + radius + 'px)';
+    }
+  } else {
+    for (var i = 0; i < aEle.length; i++) {
+      aEle[i].style.transform =
+        'rotateY(' + i * (360 / aEle.length) + 'deg) translateZ(' + radius + 'px)';
+    }
   }
+
   setOpacity(0, 9);
 }
 
@@ -64,6 +72,19 @@ function applyTranform(obj) {
 function playSpin(yes) {
   console.log('play spin called');
   ospin.style.animationPlayState = yes ? 'running' : 'paused';
+}
+
+function setRotateY(activeIndex) {
+  console.log('active client x', activeImageClientX);
+  for (let i = 0; i < aEle.length; i++) {
+    if (i === parseInt(activeIndex)) {
+      aEle[i].style.transform = 'rotateY(0deg)';
+    }
+    // check is left or right
+    aEle[i].style.transform = 'rotateY(30deg)';
+    aEle[i].style.transform = 'transform 1s';
+    console.log(aEle[i].getBoundingClientRect().x);
+  }
 }
 
 function setOpacity(activeIndex, numberOfHiddenItem) {
@@ -90,9 +111,6 @@ function setOpacity(activeIndex, numberOfHiddenItem) {
     }
     aEle[i].style.opacity = 1;
   }
-
-  // set opacity <0.2 for 1/2 rest of image
-  // for (let i=active)
 }
 
 var sX,
@@ -112,17 +130,6 @@ if (autoRotate) {
   var animationName = rotateSpeed > 0 ? 'spin' : 'spinRevert';
   ospin.style.animation = `${animationName} ${Math.abs(rotateSpeed)}s infinite linear`;
 }
-
-// // add background music
-// if (bgMusicURL) {
-//   document.getElementById('music-container').innerHTML += `
-// <audio src="${bgMusicURL}" ${bgMusicControls ? 'controls' : ''} autoplay loop>
-// <p>If you are reading this, it is because your browser does not support the audio element.</p>
-// </audio>
-// `;
-// }
-
-//
 
 // setup events
 odrag.onpointerdown = function (e) {
@@ -168,6 +175,9 @@ odrag.onpointerdown = function (e) {
     previewBg.style.backgroundImage = `url(${aEle[targetIndex].src})`;
 
     setOpacity(activeIndex, 9);
+    // if (w <= 900) {
+    //   setRotateY(activeIndex);
+    // }
     return false;
   }
 
