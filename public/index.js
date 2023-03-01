@@ -137,7 +137,7 @@ odrag.onpointerdown = function (e) {
     const targetIndex = parseInt(e.target.getAttribute('data-index'));
 
     // high light by border
-    aEle[targetIndex].style.border = '3px solid red';
+    aEle[targetIndex].style.border = '3px solid #fffd';
     aEle[activeIndex].style.border = 'none';
 
     // rotate active image to center

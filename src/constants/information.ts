@@ -3,6 +3,7 @@ export const ZALO_LINK = 'https://zalo.me/0901773236';
 export const NEON_FOLDER_PATH = '/neon';
 export const PREVIEW_BG_FOLDER_PATH = '/preview-bg';
 export const REAL_PRODUCT_FOLDER_PATH = '/real-product';
+export const PREVIEW_COLOR_FOLDER_PATH = '/preview-color';
 
 export const DEFAULT_PRODUCT_DESCRIPTION =
   'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.';
