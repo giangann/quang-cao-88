@@ -35,10 +35,6 @@ export const Carousel3dImage = () => {
               <section key={index} data-cover={image} data-index={index}></section>
             ))}
           </div>
-
-          <nav id="controls">
-            <a id="prev">Left</a> & <a id="next">Right</a>
-          </nav>
         </>
       ) : (
         <div style={{ overflowX: 'hidden' }}>

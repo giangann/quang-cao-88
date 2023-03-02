@@ -22,6 +22,7 @@
   transform-style: preserve-3d;
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
+  margin-bottom: 20px;
   /* height: 100%; */
 }
 
@@ -145,8 +146,8 @@
   top: 50%;
   left: 50%;
 
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
 
   margin-left: -90px;
   margin-top: -90px;
@@ -165,7 +166,7 @@
   -o-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
 
-  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0005);
 }
 
 /*

@@ -14,8 +14,8 @@
     _albums = [],
     _transformName = 'transform',
     // Constants
-    OFFSET = 70; // pixels
-  ROTATION = 45; // degrees
+    OFFSET = 50; // pixels
+  ROTATION = 60; // degrees
   BASE_ZINDEX = 10; //
   MAX_ZINDEX = 42; //
 
@@ -109,6 +109,10 @@
           flowRight();
         }
       }
+
+      let imgLink = e.target.getAttribute('data-cover');
+      let previewBg = document.getElementById('box-image-preview');
+      previewBg.style.backgroundImage = `url(${imgLink})`;
     }
   }
 
@@ -116,8 +120,8 @@
    * Register all events
    **/
   function registerEvents() {
-    _prevLink.addEventListener('click', flowRight, false);
-    _nextLink.addEventListener('click', flowLeft, false);
+    // _prevLink.addEventListener('click', flowRight, false);
+    // _nextLink.addEventListener('click', flowLeft, false);
     _coverflow.addEventListener('click', handleClickImg, false);
     document.addEventListener('keydown', keyDown, false);
   }
@@ -128,7 +132,7 @@
   function init() {
     // get albums & set index on the album in the middle
     _albums = Array.prototype.slice.call(document.querySelectorAll('section'));
-    _index = Math.floor(_albums.length / 2);
+    _index = Math.floor(_albums.length / 2 + 1);
 
     // get dom stuff
     _coverflow = get('#coverflow');

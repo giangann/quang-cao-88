@@ -1,4 +1,5 @@
 import { Box } from '@mui/material';
+import Draggable from 'react-draggable';
 
 import { BoxWithParallaxBgImage, Carousel3dImage, ZaloFloatIcon } from '../components';
 import { PhoneFloatIcon } from '../components/PhoneFloatIcon';
@@ -26,8 +27,12 @@ export const Home = () => {
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <Reason />
       <Contact />
-      <ZaloFloatIcon />
-      <PhoneFloatIcon />
+      <Draggable>
+        <ZaloFloatIcon />
+      </Draggable>
+      <Draggable>
+        <PhoneFloatIcon />
+      </Draggable>
     </Box>
   );
 };
