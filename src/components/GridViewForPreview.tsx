@@ -13,8 +13,8 @@ export const GridViewForPreview = (props: GridViewForPreviewProps) => {
   const { backgroundColor, borderColor, children, ...extraProps } = props;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const numberOfRows = isMobile ? 8 : 12;
-  const numberOfColumns = isMobile ? 10 : 16;
+  const numberOfRows = isMobile ? 14 : 12;
+  const numberOfColumns = isMobile ? 16 : 16;
 
   const gridTable = [];
   for (let i = 0; i < numberOfRows; i++) {
@@ -57,8 +57,8 @@ const GridRow = (props: {
         sx={{
           opacity: 0.8,
           position: !rowIndex || !colIndex ? 'relative' : 'static',
-          width: { xs: 32, sm: 140 / 3 },
-          height: { xs: 32, sm: 140 / 3 },
+          width: { xs: 20, sm: 140 / 3 },
+          height: { xs: 20, sm: 140 / 3 },
           borderTop: rowIndex ? `1px solid ${borderColor}` : 'none',
           borderRight: colIndex < numberOfCols - 1 ? `1px solid ${borderColor}` : 'none',
           borderBottom: rowIndex < numberOfRows - 1 ? `1px solid ${borderColor}` : 'none',
@@ -69,7 +69,7 @@ const GridRow = (props: {
           isMobile ? (
             <MulishTypo
               sx={{
-                fontSize: 12,
+                fontSize: 10,
                 position: 'absolute',
                 top: rowIndex ? '-12.5px' : '-18px',
                 left: colIndex ? '-10px' : '-24px',
