@@ -93,7 +93,24 @@
   }
 
   //   Handle when click image
-  function handleClickImg(targetIndex) {}
+  function handleClickImg(e) {
+    if (e.target.tagName === 'SECTION') {
+      console.log(e.target.getAttribute('data-index'));
+      const targetIndex = parseInt(e.target.getAttribute('data-index'));
+
+      // right side -> flow to left
+      if (targetIndex > _index) {
+        for (let i = _index; i < targetIndex; i++) {
+          flowLeft();
+        }
+      }
+      if (targetIndex < _index) {
+        for (let i = _index; i > targetIndex; i--) {
+          flowRight();
+        }
+      }
+    }
+  }
 
   /**
    * Register all events
@@ -101,7 +118,7 @@
   function registerEvents() {
     _prevLink.addEventListener('click', flowRight, false);
     _nextLink.addEventListener('click', flowLeft, false);
-
+    _coverflow.addEventListener('click', handleClickImg, false);
     document.addEventListener('keydown', keyDown, false);
   }
 

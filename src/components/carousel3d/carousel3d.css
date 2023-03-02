@@ -165,7 +165,7 @@
   -o-transition: all 300ms ease-in;
   transition: all 300ms ease-in;
 
-  -webkit-box-reflect: below 0 -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.3, transparent), to(white));
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, #0005);
 }
 
 /*

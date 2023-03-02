@@ -31,27 +31,9 @@ export const Carousel3dImage = () => {
       {isMobile ? (
         <>
           <div id="coverflow">
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${1}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${2}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${3}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${4}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${5}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${6}.jpg`}
-            ></section>
-            <section
-              data-cover={`${PREVIEW_BG_FOLDER_PATH}/background${7}.jpg`}
-            ></section>
+            {bgImageArr.map((image, index) => (
+              <section key={index} data-cover={image} data-index={index}></section>
+            ))}
           </div>
 
           <nav id="controls">
