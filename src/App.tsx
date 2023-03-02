@@ -1,9 +1,9 @@
 import './App.css';
 
+import { useMediaQuery, useTheme } from '@mui/material';
 import { useEffect } from 'react';
 
 import { Home } from './screens';
-import { useTheme, useMediaQuery } from '@mui/material';
 
 function App() {
   const theme = useTheme();
