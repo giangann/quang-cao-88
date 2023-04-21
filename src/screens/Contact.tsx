@@ -62,7 +62,7 @@ export const Contact = () => {
     {
       name: 'Facebook',
       icon: <RiFacebookFill color={red['300']} fontSize={24} />,
-      info: 'https://facebook.com',
+      info: 'https://www.facebook.com/Ledneonsign88',
     },
     {
       name: 'Zalo',
@@ -72,7 +72,7 @@ export const Contact = () => {
     {
       name: 'Tiktok',
       icon: <IcOutlineTiktok color={red['300']} fontSize={24} />,
-      info: 'https://facebook.com',
+      info: 'https://www.tiktok.com/@quang_cao_88?_t=8bB2K6HHodG&_r=1',
     },
     {
       name: 'Youtube',
