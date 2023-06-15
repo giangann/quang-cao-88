@@ -2,11 +2,11 @@ import '../App.css';
 
 import { Grid, Typography } from '@mui/material';
 import { useAtom } from 'jotai';
+import { useEffect } from 'react';
 
 import { listFont } from '../constants';
 import { previewAtom } from '../libs/atoms';
 import { GridCenter, textHoverStyle } from '../styled';
-import { useEffect } from 'react';
 
 export const ChooseFont = () => {
   const [preview, setPreview] = useAtom(previewAtom);
@@ -46,7 +46,10 @@ export const ChooseFont = () => {
             // role="button"
             aria-hidden="true"
           >
-            <Typography className="font-preview" sx={{ fontFamily: font, fontSize: 18, ...textHoverStyle }}>
+            <Typography
+              className="font-preview"
+              sx={{ fontFamily: font, fontSize: 18, ...textHoverStyle }}
+            >
               {font}
             </Typography>
           </div>
