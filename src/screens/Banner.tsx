@@ -4,11 +4,8 @@ import Typed from 'react-typed';
 import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
 import {
-  LatoTypo,
   MulishTypo,
-  MulishTypoHeadingTitle,
-  UVNHaiBaTrungTypo,
-  WhiteOutlinedBtn,
+  UVNHaiBaTrungTypo
 } from '../styled';
 
 export const Banner = () => {
