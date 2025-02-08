@@ -180,7 +180,7 @@ export const HotProduct = () => {
                     color: black['500'],
                   }}
                 >
-                  Danh sách các mẫu nổi bật của Quảng Cáo 88 và hình ảnh kết quả sau quá
+                  Danh sách các mẫu nổi bật của Quảng cáo Osiris và hình ảnh kết quả sau quá
                   trình thi công thực tế
                 </MulishTypo>
                 <RedContainedBtn

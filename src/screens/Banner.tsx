@@ -87,7 +87,7 @@ export const Banner = () => {
                 letterSpacing: 4,
               }}
             >
-              Quảng cáo 88
+              Quảng cáo Osiris
             </UVNHaiBaTrungTypo>
 
             <Box>

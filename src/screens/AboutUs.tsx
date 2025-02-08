@@ -33,7 +33,7 @@ import { black, grey, red, white } from '../constants';
 const desc =
   'Một biển hiệu quảng cáo hiệu quả giúp truyền tải thông tin, hình ảnh, slogan hay hình ảnh sản phẩm của công ty tốt hơn rất nhiều so với những mảng quảng cáo khác. Giúp tiếp cận được một lượng lớn khách hàng tiềm năng, những người có khi chỉ nhìn thấy hình ảnh quảng cáo của bạn; đã cảm thấy ấn tượng và họ tìm mua';
 const about =
-  'Quangcao88 chuyên thiết kế, thi công biển hiệu quảng cáo cho các cơ sở kinh doanh, cửa hàng, đại lý,... với kho mẫu mã đa dạng, giá cả hợp lý và độ tin cậy cao';
+  'Quảng cáo Osiris chuyên thiết kế, thi công biển hiệu quảng cáo cho các cơ sở kinh doanh, cửa hàng, đại lý,... với kho mẫu mã đa dạng, giá cả hợp lý và độ tin cậy cao';
 export const AboutUs = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));

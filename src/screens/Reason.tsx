@@ -17,7 +17,7 @@ export const Reason = () => {
   // Chính sách bảo hành
   // Chất lượng đảm bảo
 
-  // QUẢNG CÁO 88 là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh.
+  // Quảng cáo Osiris là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh.
 
   const reason = [
     {
@@ -84,7 +84,7 @@ export const Reason = () => {
             justifyContent="center"
             title="Lý do chọn chúng tôi"
             subTitle="Biển hiệu quảng cáo"
-            description="QUẢNG CÁO 88 là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh."
+            description="Quảng cáo Osiris là đơn vị thiết kế, thi công biển hiệu quảng cáo uy tín chuyên nghiệp trong phạm vi khu vực Thành phố Hồ Chí Minh."
           />
           <CardWithIconAndDescription
             mb={5}
