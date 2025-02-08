@@ -27,12 +27,8 @@ export const Home = () => {
       <BoxWithParallaxBgImage imgPath={parallaxImgPath} />
       <Reason />
       <Contact />
-      <Draggable>
-        <ZaloFloatIcon />
-      </Draggable>
-      <Draggable>
-        <PhoneFloatIcon />
-      </Draggable>
+      <ZaloFloatIcon />
+      <PhoneFloatIcon />
     </Box>
   );
 };
