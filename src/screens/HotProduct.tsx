@@ -24,16 +24,16 @@ export const HotProduct = () => {
 
   const hotProducts = [
     {
-      name: 'Hân Hân Store',
-      image: `${REAL_PRODUCT_FOLDER_PATH}/product21.jpg`,
+      name: 'New York Coffe',
+      image: `${REAL_PRODUCT_FOLDER_PATH}/product24.jpg`,
       description:
-        'Bảng hiệu Alu - Chữ nổi Mica cho cửa hàng quần áo, đồ lưu niệm Hân Hân Store',
+        'Bảng hiệu Alu - Chữ nổi Mica cho quán coffe thuộc hệ thống New York Coffe',
       price: 'Liên hệ',
     },
     {
-      name: 'KofiKai Coffe',
-      image: `${REAL_PRODUCT_FOLDER_PATH}/product2.jpg`,
-      description: 'Bảng hiệu Logo - Chữ nổi mica cho quán coffe thuộc hệ thống Kofi Kai',
+      name: 'Xe máy Văn Trường',
+      image: `${REAL_PRODUCT_FOLDER_PATH}/product25.jpg`,
+      description: 'Bảng hiệu Logo - Chữ nổi mica cho cửa hàng xe máy Văn Trường',
       price: 'Liên hệ',
     },
     {
