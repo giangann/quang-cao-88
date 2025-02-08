@@ -2,26 +2,24 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
   Box,
-  Button,
   Container,
   IconButton,
   Stack,
   Toolbar,
-  Typography,
   useMediaQuery,
-  useTheme,
+  useTheme
 } from '@mui/material';
 import { useState } from 'react';
 
 import { CustomDrawer } from '../components';
-import { black, LOGO, red } from '../constants';
+import { black, LOGO_BLACK, red } from '../constants';
 import { LinkCustom, MulishTypo, textHoverStyle } from '../styled';
 
 export const Header = () => {
   const [openDrawer, setOpenDrawer] = useState<boolean>(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-  const logoPath = LOGO;
+  const logoPath = LOGO_BLACK;
   const pages = [
     {
       name: 'Dịch vụ nổi bật',

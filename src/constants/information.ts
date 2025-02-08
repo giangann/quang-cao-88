@@ -7,6 +7,7 @@ export const PREVIEW_COLOR_FOLDER_PATH = '/preview-color';
 
 export const DEFAULT_PRODUCT_DESCRIPTION =
   'Eiusmodte porincididunt ut labor. Suspendisse inmagna inelit.';
-export const LOGO_REMOVE_BG = '/logo-removebg.png';
-export const LOGO = '/logo.png';
+export const LOGO_REMOVE_BG = '/logo-black-removebg.png';
+export const LOGO_BLACK = '/logo-black.jpg'
+export const LOGO_WHITE = '/logo-white.jpg'
 export const BANNER = '/banner.jpg';

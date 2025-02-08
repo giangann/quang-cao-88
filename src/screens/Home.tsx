@@ -14,7 +14,7 @@ import { Reason } from './Reason';
 import { RecentProduct } from './RecentProduct';
 
 export const Home = () => {
-  const parallaxImgPath = '/logo.jpg';
+  const parallaxImgPath = '/logo-black.jpg';
 
   return (
     <Box sx={{ backgroundColor: grey['500'] }}>
