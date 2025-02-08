@@ -246,11 +246,10 @@ export const HotProduct = () => {
                   width: '100%',
                   objectFit: 'cover',
                 }}
-                autoPlay={true}
-                controls={true}
+                autoPlay
+                controls
                 loop
-                muted={false}
-                // poster={LoadingImage}
+                muted // Safari requires muted autoplay
               >
                 <source src={VIDEO_INTRO_LINK} type="video/mp4" />
               </video>
