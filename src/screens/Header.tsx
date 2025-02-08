@@ -7,7 +7,7 @@ import {
   Stack,
   Toolbar,
   useMediaQuery,
-  useTheme
+  useTheme,
 } from '@mui/material';
 import { useState } from 'react';
 

@@ -1,10 +1,17 @@
+/* eslint-disable jsx-a11y/media-has-caption*/
 import '../styled/carousel.css';
 
 import { Box, Container, Grid, Stack, useMediaQuery, useTheme } from '@mui/material';
 import { ScrollingCarousel } from '@trendyol-js/react-carousel';
 import { useState } from 'react';
 
-import { black, REAL_PRODUCT_FOLDER_PATH, red, ZALO_LINK } from '../constants';
+import {
+  black,
+  REAL_PRODUCT_FOLDER_PATH,
+  red,
+  VIDEO_INTRO_LINK,
+  ZALO_LINK,
+} from '../constants';
 import {
   BlackOutlinedBtn,
   centerDiv,
@@ -36,12 +43,12 @@ export const HotProduct = () => {
       description: 'Bảng hiệu Logo - Chữ nổi mica cho cửa hàng xe máy Văn Trường',
       price: 'Liên hệ',
     },
-    {
-      name: 'Quán Cà Phê Tươi',
-      image: `${REAL_PRODUCT_FOLDER_PATH}/product3.jpg`,
-      description: 'Bảng hiệu nền tôn (Tole) - Chữ nổi mica cho quán Cà Phê Tươi',
-      price: 'Liên hệ',
-    },
+    // {
+    //   name: 'Quán Cà Phê Tươi',
+    //   image: `${REAL_PRODUCT_FOLDER_PATH}/product3.jpg`,
+    //   description: 'Bảng hiệu nền tôn (Tole) - Chữ nổi mica cho quán Cà Phê Tươi',
+    //   price: 'Liên hệ',
+    // },
   ];
 
   const realProducts = [
@@ -180,8 +187,8 @@ export const HotProduct = () => {
                     color: black['500'],
                   }}
                 >
-                  Danh sách các mẫu nổi bật của Quảng cáo Osiris và hình ảnh kết quả sau quá
-                  trình thi công thực tế
+                  Danh sách các mẫu nổi bật của Quảng cáo Osiris và hình ảnh kết quả sau
+                  quá trình thi công thực tế
                 </MulishTypo>
                 <RedContainedBtn
                   onClick={() => window.open(ZALO_LINK, '_blank')}
@@ -231,6 +238,23 @@ export const HotProduct = () => {
                 </Stack>
               </Grid>
             ))}
+
+            <Grid item xs={12} sm={3}>
+              <video
+                style={{
+                  height: '100%',
+                  width: '100%',
+                  objectFit: 'cover',
+                }}
+                autoPlay={true}
+                controls={true}
+                loop
+                muted={false}
+                // poster={LoadingImage}
+              >
+                <source src={VIDEO_INTRO_LINK} type="video/mp4" />
+              </video>
+            </Grid>
           </Grid>
 
           {/* View all */}

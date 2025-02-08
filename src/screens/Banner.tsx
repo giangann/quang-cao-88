@@ -3,10 +3,7 @@ import Typed from 'react-typed';
 
 import { BoxWithBackgroundAndLayer } from '../components';
 import { BANNER, LOGO_REMOVE_BG, red, ZALO_LINK } from '../constants';
-import {
-  MulishTypo,
-  UVNHaiBaTrungTypo
-} from '../styled';
+import { MulishTypo, UVNHaiBaTrungTypo } from '../styled';
 
 export const Banner = () => {
   const theme = useTheme();
