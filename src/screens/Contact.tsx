@@ -38,7 +38,7 @@ export const Contact = () => {
     {
       name: 'Địa chỉ',
       icon: <IcRoundAddLocationAlt color={red['300']} fontSize={24} />,
-      info: '109/14/30 Trương Phước Phan, Bình Trị Đông, Bình Tân, Tp Hồ Chí Minh ',
+      info: '64/1 Liên Khu 1-6, Khu 1-6, Khu Phố 1, Bình Trị Đông, Bình Tân',
     },
     {
       name: 'Hotline',
@@ -49,7 +49,7 @@ export const Contact = () => {
     {
       name: 'Email',
       icon: <IcBaselineMarkEmailUnread color={red['300']} fontSize={24} />,
-      info: 'quangcao88@gmail.com',
+      info: 'quangcaoosiris@gmail.com',
     },
     {
       name: 'Thời gian làm việc',
@@ -137,8 +137,8 @@ export const Contact = () => {
             >
               <Box>
                 <ContactDescriptionTypo mb={4}>
-                  Lorem ipsum dolor sit amet, consec adipiscing elit, sed do eiusmod
-                  tempor incididunt utlabore.
+                  Quảng cáo Osiris nhận tư vấn, thiết kế, thi công biển quảng cáo. Mặt
+                  dựng alu, bảng hiệu, bảng led, led neon,...
                 </ContactDescriptionTypo>
                 <Grid container columnSpacing={2} rowSpacing={3}>
                   {connectInfo.map((connect, index) => (
